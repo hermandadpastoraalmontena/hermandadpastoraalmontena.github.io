@@ -9,8 +9,7 @@ export default defineConfig({
     defaultLocale: 'es',
     locales: ['es', 'cat'],
     routing: {
-      prefixDefaultLocale: true,
-      redirectToDefaultLocale: true
+      prefixDefaultLocale: false
     }
   },
   integrations: [tailwind()]

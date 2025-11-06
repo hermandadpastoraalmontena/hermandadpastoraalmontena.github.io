@@ -2,6 +2,7 @@
 import mail from "@/assets/mail.svg";
 import mapPin from "@/assets/map_pin.svg";
 import phone from "@/assets/phone.svg";
+const currentLang = Astro.currentLocale || "es";
 ---
 
 <aside
@@ -12,18 +13,38 @@ import phone from "@/assets/phone.svg";
   >
     <div class="flex flex-col gap-2">
       <h2 class="text-lg lg:text-2xl text-center font-bold mb-4 drop-shadow-lg">
-        Contacto
+        {currentLang === "cat" ? "Contacte" : "Contacto"}
       </h2>
       <div class="flex flex-row gap-2 justify-center place-items-center">
-        <img src={mapPin.src} alt="Dirección" class="w-6 h-6" />
-        <p class="text-sm">Calle Claveles, 2-4, L'Hospitalet de Llobregat</p>
+        <img
+          src={mapPin.src}
+          alt={currentLang === "cat" ? "Direcció" : "Dirección"}
+          class="w-6 h-6"
+        />
+        <p class="text-sm">
+          {
+            currentLang === "cat"
+              ? `Carrer Clavells, 2-4, L'Hospitalet de Llobregat`
+              : `Calle Claveles, 2-4, L'Hospitalet de Llobregat`
+          }
+        </p>
       </div>
       <div class="flex flex-row gap-2 justify-center place-items-center">
-        <img src={phone.src} alt="Teléfono" class="w-6 h-6" />
+        <img
+          src={phone.src}
+          alt={currentLang === "cat" ? "Telèfon" : "Teléfono"}
+          class="w-6 h-6"
+        />
         <p class="text-sm">934 37 95 36</p>
       </div>
       <div class="flex flex-row gap-2 justify-center place-items-center">
-        <img src={mail.src} alt="Correo electrónico" class="w-6 h-6" />
+        <img
+          src={mail.src}
+          alt={currentLang === "cat"
+            ? "Correu electrònic"
+            : "Correo electrónico"}
+          class="w-6 h-6"
+        />
         <p class="text-sm">pastoraalmonte@hotmail.com</p>
       </div>
     </div>
@@ -31,7 +52,7 @@ import phone from "@/assets/phone.svg";
 
   <div class="p-8 w-72 md:w-[30rem] border-2 rounded-2xl border-black">
     <h2 class="text-lg lg:text-2xl text-center font-bold mb-4 drop-shadow-lg">
-      Redes Sociales
+      {currentLang === "cat" ? "Xarxes Socials" : "Redes Sociales"}
     </h2>
     <ul id="rrss" class="flex-col gap-2 items-center flex">
       <li>

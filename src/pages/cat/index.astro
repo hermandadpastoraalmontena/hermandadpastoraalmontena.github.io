@@ -2,6 +2,11 @@
 import Layout from "@/layouts/Layout.astro";
 import Contact from "@/components/Contact.astro";
 import medalRope from "@/assets/medal_rope.webp";
+import ajhospitalet from "@/assets/ajhospitalet.webp";
+import fecac from "@/assets/fecac.webp";
+import fecealh from "@/assets/fecealh.webp";
+import diba from "@/assets/diba.webp";
+import juntaand from "@/assets/juntaand.webp";
 ---
 
 <Layout title="Hermandad Rociera Pastora Almonteña">
@@ -65,7 +70,7 @@ import medalRope from "@/assets/medal_rope.webp";
         estat partícip de tot el moviment rociero a Catalunya, assistint a
         Certàmens de Cors Rocieros, Festivals i Zambombas de Nadales, Actes
         Benèfics, Misses Rocieras, Festa Major de Can Serra, Fira d'Abril a
-        Catalunya, Romeria del Rocío, Setmana Santa i altres innombrables actes
+        Catalunya, Romeria del Rocío, Setmana Santa i altres innomenables actes
         socials.
       </p>
       <p class="text-left w-full">
@@ -73,7 +78,68 @@ import medalRope from "@/assets/medal_rope.webp";
         la componen més de 70 germans dedicats al progrés rociero així com a la
         cultura andalusa i catalana en general.
       </p>
+      <div class="flex flex-col gap-2">
+        <p class="text-left w-full italic text-sm">
+          * L'hermano mayor d'una hermandad rociera és el màxim representant de
+          l'hermandad, encarregat d'organitzar-la i representar-la en els actes
+          religiosos i festius, especialment durant la romeria del Rocío. És un
+          membre elegit pels altres membres de l'hermandad i sol regentar aquest
+          títol durant un any.
+        </p>
+        <p class="text-left w-full italic text-sm">
+          ** El "Simpecao" és l'estendard o bandera d'una hermandad rociera, que
+          sol portar una imatge de la Verge del Rocío. És un símbol molt
+          important dins de l'hermandad, ja que representa la Verge i els
+          rocieros que la segueixen. Es porta en la processó durant la romeria
+          del Rocío (o en una carreta durant el camí cap a la romeria), sent
+          portat pels germans o germanes i en moltes ocasions acompanyat de
+          cants i resos. És considerat un símbol de devoció i d'identitat de
+          l'hermandad.
+        </p>
+      </div>
     </div>
   </section>
-  <Contact />
 </Layout>
+<Contact />
+<footer class="flex flex-row gap-4 place-items-center justify-center px-6 pb-2">
+  <a
+    href="https://www.l-h.cat/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="hover:scale-105 transition ease-in-out"
+  >
+    <img src={ajhospitalet.src} alt="Ajuntament de l'Hospitalet" class="w-28" />
+  </a>
+  <a
+    href="https://fecac.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="hover:scale-105 transition ease-in-out"
+  >
+    <img src={fecac.src} alt="FECAC" class="w-28" />
+  </a>
+  <a
+    href="https://www.instagram.com/fecealh/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="hover:scale-105 transition ease-in-out"
+  >
+    <img src={fecealh.src} alt="FECEAL'H" class="w-28" />
+  </a>
+  <a
+    href="https://www.diba.cat/es/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="hover:scale-105 transition ease-in-out"
+  >
+    <img src={diba.src} alt="Diputació de Barcelona" class="w-28" />
+  </a>
+  <a
+    href="https://www.juntadeandalucia.es/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="hover:scale-105 transition ease-in-out"
+  >
+    <img src={juntaand.src} alt="Junta de Andalucía" class="w-28" />
+  </a>
+</footer>

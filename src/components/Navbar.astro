@@ -1,13 +1,37 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import cat from "@/assets/cat.webp";
+import es from "@/assets/es.webp";
 const page = Astro.url.pathname;
-console.log(page);
+const pageId = page[4] === undefined ? "" : page[4];
+const currentLang = Astro.currentLocale || "es";
+
+console.log("pageId:", pageId);
+console.log("currentLang:", currentLang);
 ---
 
-<nav class="flex flex-row justify-center gap-4 py-8">
+<nav
+  class="grid grid-cols-2 md:grid-cols-3 justify-center place-items-center gap-4 p-4 md:px-8"
+>
+  <p class="hidden md:block"></p>
   <a
-    href="/"
-    class={page === "/"
+    href={getRelativeLocaleUrl(currentLang, `/`)}
+    class={page.includes("/") || page.includes("/es/")
       ? "text-red-700 border-b-[1px] border-red-700 font-bold"
-      : "hover:text-red-700 hover:scale-105 transition"}>Sobre nosotros</a
+      : "hover:text-red-700 hover:scale-105 transition"}
+    >{currentLang === "cat" ? "Sobre nosaltres" : "Sobre nosotros"}</a
   >
+  <a
+    href={currentLang === "cat"
+      ? getRelativeLocaleUrl("es", `/${pageId}`)
+      : getRelativeLocaleUrl("cat", `/${pageId}`)}
+    class="place-self-end hover:scale-105 transition ease-in-out"
+  >
+    <img
+      src={currentLang === "cat" ? es.src : cat.src}
+      alt={currentLang === "cat" ? "Bandera de Catalunya" : "Bandera de España"}
+      title={currentLang === "cat" ? "Canviar a castellà" : "Cambiar a catalán"}
+      class="w-10 mx-auto"
+    />
+  </a>
 </nav>

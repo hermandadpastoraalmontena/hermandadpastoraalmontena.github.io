@@ -5,5 +5,13 @@ import tailwind from '@astrojs/tailwind'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://hermandadpastoraalmontena.github.io',
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'cat'],
+    routing: {
+      prefixDefaultLocale: true,
+      redirectToDefaultLocale: true
+    }
+  },
   integrations: [tailwind()]
 })

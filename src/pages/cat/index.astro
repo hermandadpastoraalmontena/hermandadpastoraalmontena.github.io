@@ -1,0 +1,79 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Contact from "@/components/Contact.astro";
+import medalRope from "@/assets/medal_rope.webp";
+---
+
+<Layout title="Hermandad Rociera Pastora Almonteña">
+  <section class="lg:px-16 px-6 grid grid-rows-[300px_calc(100%-300px)]">
+    <div
+      class="flex flex-col justify-center items-center px-6 pb-8 md:pb-0 bg-cover bg-center"
+    >
+      <img
+        src={medalRope.src}
+        alt="Medalla de l'Hermandad Rociera Pastora Almonteña"
+        class="w-48 h-48 lg:mb-6"
+      />
+      <h1
+        class="text-lg lg:text-2xl xl:text-4xl text-center font-bold mb-4 drop-shadow-lg"
+      >
+        Hermandad Rociera Pastora Almonteña de L'Hospitalet de Llobregat
+      </h1>
+    </div>
+    <div class="flex flex-col gap-8">
+      <p class="text-left w-full">
+        L'any 1985, un grup d'emigrants andalusos i d'altres llocs d'Espanya que
+        residien a terres catalanes van començar conjuntament amb altres grups
+        de persones a establir un fil d'unió amb motiu de la nostàlgia i costums
+        de la seva terra, tenint com a màxima expressió la Romeria del Rocío.
+      </p>
+      <p class="text-left w-full">
+        L'any 1986, aquestes reunions van anar agafant més cos i compromís
+        fundant-se així la <strong
+          >Hermandad Rociera Andaluza Barcelona Centro</strong
+        >.
+      </p>
+      <p class="text-left w-full">
+        Fundadors de l'entitat com José Antonio Povedano, Manuel Hernández,
+        Gabriel Muela, Manuel Sánchez i Justo Rodríguez van iniciar un camí que
+        avui dia continua la seva andadura.
+      </p>
+      <p class="text-left w-full">
+        Els primers anys de celebració de la Romeria es van realitzar en
+        diferents poblacions de Barcelona sense tenir una ubicació fixa.
+      </p>
+      <p class="text-left w-full">
+        Fins a l'any 1989 la Hermandad va tenir la seva seu a Barcelona i, l'any
+        1990, es va traslladar a L'Hospitalet de Llobregat, al barri de Can
+        Serra, aquest trasllat va ser motivat perquè la majoria dels germans que
+        componien l'entitat s'establien a aquesta localitat. Després d'aquest
+        desplaçament, l'entitat va passar a denominar-se <strong
+          >Hermandad Rociera Recreativo Cultural Barcelona Centro Pastora
+          Almonteña de L'Hospitalet de Llobregat</strong
+        >.
+      </p>
+      <p class="text-left w-full">
+        L'Hermano Mayor en 1991, Paco Trigueros, va donar un nou "Simpecao"
+        elaborat i brodat a Màlaga. La bellesa i imatge d'aquest "Simpecao" ha
+        estat sentinella per als germans de l'entitat fins a finals de l'any
+        2007, quan es va beneir el nou i actual "Simpecao", elaborat i brodat a
+        Sevilla, aquest substitueix l'anterior per deteriorament del pas dels
+        anys.
+      </p>
+      <p class="text-left w-full">
+        Durant tots aquests anys, la Hermandad Rociera Pastora Almonteña ha
+        estat partícip de tot el moviment rociero a Catalunya, assistint a
+        Certàmens de Cors Rocieros, Festivals i Zambombas de Nadales, Actes
+        Benèfics, Misses Rocieras, Festa Major de Can Serra, Fira d'Abril a
+        Catalunya, Romeria del Rocío, Setmana Santa i altres innombrables actes
+        socials.
+      </p>
+      <p class="text-left w-full">
+        En l'actualitat, la Hermandad Rociera Pastora Almonteña de L'Hospitalet
+        la componen més de 70 germans dedicats al progrés rociero així com a la
+        cultura andalusa i catalana en general.
+      </p>
+    </div>
+  </section>
+  <Contact />
+</Layout>

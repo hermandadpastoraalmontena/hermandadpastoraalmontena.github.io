@@ -2,6 +2,11 @@
 import Layout from "@/layouts/Layout.astro";
 import Contact from "@/components/Contact.astro";
 import medalRope from "@/assets/medal_rope.webp";
+import ajhospitalet from "@/assets/ajhospitalet.webp";
+import fecac from "@/assets/fecac.webp";
+import fecealh from "@/assets/fecealh.webp";
+import diba from "@/assets/diba.webp";
+import juntaand from "@/assets/juntaand.webp";
 ---
 
 <Layout title="Hermandad Rociera Pastora Almonteña">
@@ -54,7 +59,7 @@ import medalRope from "@/assets/medal_rope.webp";
         >.
       </p>
       <p class="text-left w-full">
-        El Hermano Mayor en 1991, Paco Trigueros, donó un nuevo "Simpecao"
+        El Hermano Mayor* en 1991, Paco Trigueros, donó un nuevo "Simpecao"**
         elaborado y bordado en Málaga. La belleza e imagen de este "Simpecao" ha
         sido vigía para los hermanos de la entidad hasta finales del año 2007,
         cuando se bendijo el nuevo y actual "Simpecao", elaborado y bordado en
@@ -73,7 +78,74 @@ import medalRope from "@/assets/medal_rope.webp";
         la componen más de 70 hermanos dedicados al progreso rociero así como a
         la cultura andaluza y catalana en general.
       </p>
+      <div class="flex flex-col gap-2">
+        <p class="text-left w-full italic text-sm">
+          * El hermano mayor de una hermandad rociera es el mayor representante
+          de la hermandad, encargado de organizar y representarla en los actos
+          religiosos y festivos, especialmente durante la romería del Rocío. Es
+          un miembro elegido por los demás miembros de la hermandad y suele
+          regentar ese título durante un año.
+        </p>
+        <p class="text-left w-full italic text-sm">
+          ** El "Simpecao" es el estandarte o bandera de una hermandad rociera,
+          que suele llevar una imagen de la Virgen del Rocío. Es un símbolo muy
+          importante dentro de la hermandad, ya que representa a la Virgen y a
+          los rocieros que la siguen. Se lleva en la procesión durante la
+          romería del Rocío (o en una carreta durante el camino hacia la
+          romería), siendo portado por los hermanos o hermanas y en muchas
+          ocasiones acompañado de cánticos y rezos. Es considerado un símbolo de
+          devoción y de identidad de la hermandad.
+        </p>
+      </div>
     </div>
   </section>
   <Contact />
+  <footer
+    class="flex flex-row gap-4 place-items-center justify-center px-6 pb-2"
+  >
+    <a
+      href="https://www.l-h.cat/inici_2.aspx"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:scale-105 transition ease-in-out"
+    >
+      <img
+        src={ajhospitalet.src}
+        alt="Ajuntament de l'Hospitalet"
+        class="w-28"
+      />
+    </a>
+    <a
+      href="https://fecac.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:scale-105 transition ease-in-out"
+    >
+      <img src={fecac.src} alt="FECAC" class="w-28" />
+    </a>
+    <a
+      href="https://www.instagram.com/fecealh/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:scale-105 transition ease-in-out"
+    >
+      <img src={fecealh.src} alt="FECEAL'H" class="w-28" />
+    </a>
+    <a
+      href="https://www.diba.cat/es/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:scale-105 transition ease-in-out"
+    >
+      <img src={diba.src} alt="Diputació de Barcelona" class="w-28" />
+    </a>
+    <a
+      href="https://www.juntadeandalucia.es/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:scale-105 transition ease-in-out"
+    >
+      <img src={juntaand.src} alt="Junta de Andalucía" class="w-28" />
+    </a>
+  </footer>
 </Layout>

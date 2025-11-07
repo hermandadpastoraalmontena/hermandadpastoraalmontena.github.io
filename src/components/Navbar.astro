@@ -3,19 +3,22 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import cat from "@/assets/banderas/cat.webp";
 import es from "@/assets/banderas/es.webp";
 import menu from "@/assets/svg/menu.svg";
+import { undefined } from "astro:schema";
 const page = Astro.url.pathname;
 const pageId = page[4] === undefined ? "" : page[4];
 const currentLang = Astro.currentLocale || "es";
+
+console.log("pageId:", pageId);
 ---
 
 <nav
   class="flex flex-col justify-start w-full place-items-center gap-4 p-4 md:px-8"
 >
   <div
-    class="grid grid-cols-2 md:grid-cols-3 w-full justify-center place-items-center cursor-pointer"
+    class="grid grid-cols-2 md:grid-cols-3 w-full justify-center place-items-center"
   >
     <button
-      class="flex flex-row gap-1 place-items-center justify-self-start justify-center bg-red-800 hover:bg-red-900 transition ease-in-out w-28 rounded-2xl p-2"
+      class="flex flex-row gap-1 place-items-center justify-self-start justify-center bg-red-800 hover:bg-red-900 transition ease-in-out w-28 rounded-2xl p-2 cursor-pointer"
       id="menu-button"
     >
       <img src={menu.src} alt="Menu" class="w-8 h-8" />
@@ -24,7 +27,7 @@ const currentLang = Astro.currentLocale || "es";
     <p class="text-lg md:text-xl text-red-800 font-black">
       {
         (() => {
-          switch (page) {
+          switch (pageId) {
             case "/":
               return currentLang === "cat"
                 ? "Sobre nosaltres"
@@ -50,7 +53,9 @@ const currentLang = Astro.currentLocale || "es";
                 ? "Junta Directiva"
                 : "Junta Directiva";
             default:
-              return "";
+              return currentLang === "cat"
+                ? "Sobre nosaltres"
+                : "Sobre nosotros";
           }
         })()
       }
@@ -63,37 +68,37 @@ const currentLang = Astro.currentLocale || "es";
   >
     <a
       href={getRelativeLocaleUrl(currentLang, `/`)}
-      class={page === "/"
+      class={page === "/" || page === "/cat/"
         ? "text-red-800 border-red-800 font-bold"
         : "hover:text-red-800 hover:scale-105 transition"}
       >{currentLang === "cat" ? "Sobre nosaltres" : "Sobre nosotros"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/romeriadelrocio`)}
-      class={page === "/romeriadelrocio/"
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
+      class={page === "/romeriadelrocio/" || page === "/cat/romeriadelrocio/"
+        ? "text-red-800 border-red-800 font-bold pointer-events-none"
+        : "hover:text-red-800 hover:scale-105 transition pointer-events-none"}
       >{currentLang === "cat" ? "Romería del Rocío" : "Romería del Rocío"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/pregonrociero`)}
-      class={page === "/pregonrociero/"
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
+      class={page === "/pregonrociero/" || page === "/cat/pregonrociero/"
+        ? "text-red-800 border-red-800 font-bold pointer-events-none"
+        : "hover:text-red-800 hover:scale-105 transition pointer-events-none"}
       >{currentLang === "cat" ? "Pregó Rociero" : "Pregón Rociero"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/cambiodevara`)}
-      class={page === "/cambiodevara/"
+      class={page === "/cambiodevara/" || page === "/cat/cambiodevara/"
         ? "text-red-800 border-red-800 font-bold"
         : "hover:text-red-800 hover:scale-105 transition"}
       >{currentLang === "cat" ? "Canvi de Vara" : "Cambio de Vara"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/villancicos`)}
-      class={page === "/villancicos/"
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
+      class={page === "/villancicos/" || page === "/cat/villancicos/"
+        ? "text-red-800 border-red-800 font-bold pointer-events-none"
+        : "hover:text-red-800 hover:scale-105 transition pointer-events-none"}
       >{
         currentLang === "cat"
           ? "Festival i Zambomba de nadales"
@@ -102,28 +107,28 @@ const currentLang = Astro.currentLocale || "es";
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/santjordi`)}
-      class={page === "/santjordi/"
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
+      class={page === "/santjordi/" || page === "/cat/santjordi/"
+        ? "text-red-800 border-red-800 font-bold pointer-events-none"
+        : "hover:text-red-800 hover:scale-105 transition pointer-events-none"}
       >{currentLang === "cat" ? "Sant Jordi" : "Sant Jordi"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/coro`)}
-      class={page === "/coro/"
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
+      class={page === "/coro/" || page === "/cat/coro/"
+        ? "text-red-800 border-red-800 font-bold pointer-events-none"
+        : "hover:text-red-800 hover:scale-105 transition pointer-events-none"}
       >{currentLang === "cat" ? "Cor" : "Coro"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/juntadirectiva`)}
-      class={page === "/juntadirectiva/"
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
+      class={page === "/juntadirectiva/" || page === "/cat/juntadirectiva/"
+        ? "text-red-800 border-red-800 font-bold pointer-events-none"
+        : "hover:text-red-800 hover:scale-105 transition pointer-events-none"}
       >{currentLang === "cat" ? "Junta Directiva" : "Junta Directiva"}</a
     >
     <div class="flex flex-row gap-4 mt-4">
       <a
-        href={getRelativeLocaleUrl("es", `/${pageId}`)}
+        href={getRelativeLocaleUrl("es", `/${pageId ? pageId : ""}`)}
         class="place-self-end hover:scale-105 transition ease-in-out"
       >
         <img
@@ -138,7 +143,7 @@ const currentLang = Astro.currentLocale || "es";
         />
       </a>
       <a
-        href={getRelativeLocaleUrl("cat", `/${pageId}`)}
+        href={getRelativeLocaleUrl("cat", `/${pageId ? pageId : ""}`)}
         class="place-self-end hover:scale-105 transition ease-in-out"
       >
         <img

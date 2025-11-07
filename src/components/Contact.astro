@@ -15,7 +15,10 @@ const currentLang = Astro.currentLocale || "es";
       <h2 class="text-lg lg:text-2xl text-center font-bold mb-4 drop-shadow-lg">
         {currentLang === "cat" ? "Contacte" : "Contacto"}
       </h2>
-      <div class="flex flex-row gap-2 justify-center place-items-center">
+      <a
+        href="https://www.google.com/maps/dir//Carrer+Clavells,+2,+08905+L'Hospitalet+de+Llobregat,+Barcelona/@41.3701386,2.1041608,19z/data=!4m18!1m8!3m7!1s0x12a4991d6df9871d:0xf7e941303ae6c5ee!2sCarrer+Clavells,+2,+08905+L'Hospitalet+de+Llobregat,+Barcelona!3b1!8m2!3d41.3701376!4d2.1048045!16s%2Fg%2F11y5pf22j5!4m8!1m0!1m5!1m1!1s0x12a4991d6df9871d:0xf7e941303ae6c5ee!2m2!1d2.1048045!2d41.3701376!3e2?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
+        class="flex flex-row gap-2 justify-center place-items-center hover:text-red-800 transition ease-in-out hover:underline"
+      >
         <img
           src={mapPin.src}
           alt={currentLang === "cat" ? "Direcció" : "Dirección"}
@@ -28,16 +31,22 @@ const currentLang = Astro.currentLocale || "es";
               : `Calle Claveles, 2-4, L'Hospitalet de Llobregat`
           }
         </p>
-      </div>
-      <div class="flex flex-row gap-2 justify-center place-items-center">
+      </a>
+      <a
+        href="tel:+34687561047"
+        class="flex flex-row gap-2 justify-center place-items-center hover:text-red-800 transition ease-in-out hover:underline"
+      >
         <img
           src={phone.src}
           alt={currentLang === "cat" ? "Telèfon" : "Teléfono"}
           class="w-6 h-6"
         />
         <p class="text-sm">687 561 047</p>
-      </div>
-      <div class="flex flex-row gap-2 justify-center place-items-center">
+      </a>
+      <a
+        href="mailto:pastoraalmonte@hotmail.com"
+        class="flex flex-row gap-2 justify-center place-items-center hover:text-red-800 transition ease-in-out hover:underline"
+      >
         <img
           src={mail.src}
           alt={currentLang === "cat"
@@ -46,7 +55,7 @@ const currentLang = Astro.currentLocale || "es";
           class="w-6 h-6"
         />
         <p class="text-sm">pastoraalmonte@hotmail.com</p>
-      </div>
+      </a>
     </div>
   </div>
 

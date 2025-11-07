@@ -1,6 +1,72 @@
 ---
+import Footer from "@/components/Footer.astro";
 import Layout from "@/layouts/Layout.astro";
 import cartel from "@/images/cambiodevara/cartel.webp";
 ---
 
-<Layout title="Cambio de vara" />
+<Layout title="Cambio de vara">
+  <section class="flex flex-col gap-8 lg:px-16 px-6">
+    <div class="flex flex-col md:grid md:grid-cols-2 gap-8 items-center mb-8">
+      <img
+        src={cartel.src}
+        alt="Cartel del Cambio de Vara 2025"
+        class="w-96 rounded-md shadow-lg justify-self-end"
+      />
+      <div class="flex flex-col gap-4">
+        <div>
+          <p>📅 15 de Noviembre del 2025</p>
+          <p>🕒 17:00h</p>
+          <p>📍 Parròquia de Santa Eulàlia de Mèrida</p>
+        </div>
+        <p>
+          Posteriormente, ofreceremos un vino de honor en nuestra sede social
+          del Centro Cultural Claveles
+        </p>
+      </div>
+    </div>
+    <p>
+      El Cambio de vara es uno de los actos más importantes del año para una
+      Hermandad Rociera.
+    </p>
+    <p>
+      En este acto, se ofrece una misa y, antes de la salve, se realiza el
+      cambio de vara en el altar de la iglesia. El cambio de vara consiste en
+      que el actual Hermano Mayor* de la Hermandad, tras haber cumplido su
+      mandato (normalmente un año), entrega la vara de Hermano Mayor al nuevo
+      Hermano Mayor entrante.
+    </p>
+    <p>
+      También se intercambian los cargos de los portadores de los estandartes
+      representativos de la Hermandad: simpecao, guión o bacalao y banderín**.
+    </p>
+    <p>
+      La Hermandad obsequia al Hermano Mayor con un recuerdo de su mandato y con
+      una vara de caminante y, antes de abandonar el altar, el Hermano Mayor
+      saliente dirige unas palabras a los asistentes comentando su mandato y
+      agradeciendo el apoyo recibido.
+    </p>
+    <p>
+      Finalmente, se ofrece un vino de honor en la sede social de la Hermandad a
+      todos los asistentes al acto.
+    </p>
+    <div class="flex flex-col gap-2">
+      <p class="text-left w-full italic text-sm">
+        * El hermano mayor de una hermandad rociera es el mayor representante de
+        la hermandad, encargado de organizar y representarla en los actos
+        religiosos y festivos, especialmente durante la romería del Rocío. Es un
+        miembro elegido por los demás miembros de la hermandad y suele regentar
+        ese título durante un año.
+      </p>
+      <p class="text-left w-full italic text-sm">
+        ** El "Simpecao" es el estandarte o bandera de una hermandad rociera,
+        que suele llevar una imagen de la Virgen del Rocío. Es un símbolo muy
+        importante dentro de la hermandad, ya que representa a la Virgen y a los
+        rocieros que la siguen. El guión o bacalao es otro estandarte que suelen
+        llevar las hermandades rocieras que representa a la ciudad donde reside
+        la hermandad, y el banderín es una pequeña bandera que también se
+        utiliza en los actos rocieros.
+      </p>
+    </div>
+  </section>
+  <Footer />
+</Layout>

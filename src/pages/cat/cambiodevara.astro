@@ -1,6 +1,72 @@
 ---
+import Footer from "@/components/Footer.astro";
 import Layout from "@/layouts/Layout.astro";
 import cartel from "@/images/cambiodevara/cartel.webp";
 ---
 
-<Layout title="Cambio de vara" />
+<Layout title="Canvi de vara">
+  <section class="flex flex-col gap-8 lg:px-16 px-6">
+    <div class="flex flex-col md:grid md:grid-cols-2 gap-8 items-center mb-8">
+      <img
+        src={cartel.src}
+        alt="Cartel del Canvi de Vara 2025"
+        class="w-96 rounded-md shadow-lg justify-self-end"
+      />
+      <div class="flex flex-col gap-4">
+        <div>
+          <p>📅 15 de Novembre del 2025</p>
+          <p>🕒 17:00h</p>
+          <p>📍 Parròquia de Santa Eulàlia de Mèrida</p>
+        </div>
+        <p>
+          Posteriorment, oferirem un vi d'honor a la nostra seu social del
+          Centre Cultural Claveles
+        </p>
+      </div>
+    </div>
+    <p>
+      El Canvi de vara és un dels actes més importants de l'any per a una
+      Hermandad Rociera.
+    </p>
+    <p>
+      En aquest acte, s'ofereix una missa i, abans de la salve, es realitza el
+      canvi de vara a l'altar de l'església. El canvi de vara consisteix en que
+      l'actual Hermano Mayor* de la Hermandad, després d'haver complert el seu
+      mandat (normalment un any), lliura la vara d'Hermano Mayor al nou Hermano
+      Mayor entrant.
+    </p>
+    <p>
+      També s'intercanvien els càrrecs dels portadors dels estendards
+      representatius de la Hermandad: simpecao, guió o bacallà i banderí**.
+    </p>
+    <p>
+      La Hermandad obsequia a l'Hermano Mayor amb un record del seu mandat i amb
+      una vara de caminant i, abans d'abandonar l'altar, l'Hermano Mayor sortint
+      dirigeix unes paraules als assistents comentant el seu mandat i agraint el
+      suport rebut.
+    </p>
+    <p>
+      Finalment, s'ofereix un vi d'honor a la seu social de la Hermandad a tots
+      els assistents a l'acte.
+    </p>
+    <div class="flex flex-col gap-2">
+      <p class="text-left w-full italic text-sm">
+        * L'hermano mayor d'una hermandad rociera és el màxim representant de
+        l'hermandad, encarregat d'organitzar-la i representar-la en els actes
+        religiosos i festius, especialment durant la romeria del Rocío. És un
+        membre elegit pels altres membres de l'hermandad i sol regentar aquest
+        títol durant un any.
+      </p>
+      <p class="text-left w-full italic text-sm">
+        ** El "Simpecao" és l'estendard o bandera d'una hermandad rociera, que
+        sol portar una imatge de la Verge del Rocío. És un símbol molt important
+        dins de l'hermandad, ja que representa la Verge i els rocieros que la
+        segueixen. El guió o bacallà és un altre estendard que solen portar les
+        hermandades rocieras que representa a la ciutat on resideix la
+        hermandad, i el banderí és una petita bandera que també es fa servir en
+        els actes rocieros.
+      </p>
+    </div>
+  </section>
+  <Footer />
+</Layout>

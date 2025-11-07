@@ -5,9 +5,12 @@ import es from "@/assets/banderas/es.webp";
 import menu from "@/assets/svg/menu.svg";
 import { undefined } from "astro:schema";
 const page = Astro.url.pathname;
-const pageId = page[4] === undefined ? "" : page[4];
+const pagedivided = page.split("/");
+const pageId = pagedivided[2] === null ? "" : pagedivided[2];
 const currentLang = Astro.currentLocale || "es";
 
+console.log("page", page);
+console.log("pagedivided:", pagedivided);
 console.log("pageId:", pageId);
 ---
 
@@ -28,27 +31,27 @@ console.log("pageId:", pageId);
       {
         (() => {
           switch (pageId) {
-            case "/":
+            case "":
               return currentLang === "cat"
                 ? "Sobre nosaltres"
                 : "Sobre nosotros";
-            case "/romeriadelrocio/":
+            case "romeriadelrocio":
               return currentLang === "cat"
                 ? "Romería del Rocío"
                 : "Romería del Rocío";
-            case "/pregonrociero/":
+            case "pregonrociero":
               return currentLang === "cat" ? "Pregó Rociero" : "Pregón Rociero";
-            case "/cambiodevara/":
+            case "cambiodevara":
               return currentLang === "cat" ? "Canvi de Vara" : "Cambio de Vara";
-            case "/villancicos/":
+            case "villancicos":
               return currentLang === "cat"
                 ? "Festival i Zambomba de nadales"
                 : "Festival y Zambomba de villancicos";
-            case "/santjordi/":
+            case "santjordi":
               return currentLang === "cat" ? "Sant Jordi" : "Sant Jordi";
-            case "/coro/":
+            case "coro":
               return currentLang === "cat" ? "Cor" : "Coro";
-            case "/juntadirectiva/":
+            case "juntadirectiva":
               return currentLang === "cat"
                 ? "Junta Directiva"
                 : "Junta Directiva";
@@ -68,35 +71,35 @@ console.log("pageId:", pageId);
   >
     <a
       href={getRelativeLocaleUrl(currentLang, `/`)}
-      class={page === "/" || page === "/cat/"
+      class={pageId === ""
         ? "text-red-800 border-red-800 font-bold"
         : "hover:text-red-800 hover:scale-105 transition"}
       >{currentLang === "cat" ? "Sobre nosaltres" : "Sobre nosotros"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/romeriadelrocio`)}
-      class={page === "/romeriadelrocio/" || page === "/cat/romeriadelrocio/"
+      class={pageId === "romeriadelrocio"
         ? "text-red-800 border-red-800 font-bold pointer-events-none"
         : "hover:text-red-800 hover:scale-105 transition pointer-events-none"}
       >{currentLang === "cat" ? "Romería del Rocío" : "Romería del Rocío"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/pregonrociero`)}
-      class={page === "/pregonrociero/" || page === "/cat/pregonrociero/"
+      class={pageId === "pregonrociero"
         ? "text-red-800 border-red-800 font-bold pointer-events-none"
         : "hover:text-red-800 hover:scale-105 transition pointer-events-none"}
       >{currentLang === "cat" ? "Pregó Rociero" : "Pregón Rociero"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/cambiodevara`)}
-      class={page === "/cambiodevara/" || page === "/cat/cambiodevara/"
+      class={pageId === "cambiodevara"
         ? "text-red-800 border-red-800 font-bold"
         : "hover:text-red-800 hover:scale-105 transition"}
       >{currentLang === "cat" ? "Canvi de Vara" : "Cambio de Vara"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/villancicos`)}
-      class={page === "/villancicos/" || page === "/cat/villancicos/"
+      class={pageId === "villancicos"
         ? "text-red-800 border-red-800 font-bold pointer-events-none"
         : "hover:text-red-800 hover:scale-105 transition pointer-events-none"}
       >{
@@ -107,21 +110,21 @@ console.log("pageId:", pageId);
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/santjordi`)}
-      class={page === "/santjordi/" || page === "/cat/santjordi/"
+      class={pageId === "santjordi"
         ? "text-red-800 border-red-800 font-bold pointer-events-none"
         : "hover:text-red-800 hover:scale-105 transition pointer-events-none"}
       >{currentLang === "cat" ? "Sant Jordi" : "Sant Jordi"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/coro`)}
-      class={page === "/coro/" || page === "/cat/coro/"
+      class={pageId === "coro"
         ? "text-red-800 border-red-800 font-bold pointer-events-none"
         : "hover:text-red-800 hover:scale-105 transition pointer-events-none"}
       >{currentLang === "cat" ? "Cor" : "Coro"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/juntadirectiva`)}
-      class={page === "/juntadirectiva/" || page === "/cat/juntadirectiva/"
+      class={pageId === "juntadirectiva"
         ? "text-red-800 border-red-800 font-bold pointer-events-none"
         : "hover:text-red-800 hover:scale-105 transition pointer-events-none"}
       >{currentLang === "cat" ? "Junta Directiva" : "Junta Directiva"}</a

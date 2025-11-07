@@ -1,12 +1,18 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import FooterOnlyLogos from "./FooterOnlyLogos.astro";
+import medal from "@/assets/medallas/medal.webp";
 const currentLang = Astro.currentLocale || "es";
 ---
 
 <footer
-  class="fixed bottom-0 left-0 w-full bg-white px-4 grid grid-cols-2 justify-between items-center h-20 md:h-32 border-t-[1px] border-black"
+  class="w-full bg-white px-4 grid grid-cols-2 justify-between items-center h-20 md:h-32 border-black"
 >
-  <a href="/" class="flex flex-col gap-[4px] justify-center place-items-center">
-    <img src="/src/assets/medal.webp" alt="Medal Icon" class="w-12 h-12" />
+  <a
+    href={getRelativeLocaleUrl(currentLang, `/`)}
+    class="flex flex-col gap-[4px] justify-center place-items-center"
+  >
+    <img src={medal.src} alt="Medal Icon" class="w-12 h-12" />
     <p class="hidden lg:block text-sm text-center">
       Hermandad Rociera Pastora Almonteña de L'Hospitalet de Llobregat
     </p>
@@ -84,3 +90,4 @@ const currentLang = Astro.currentLocale || "es";
     </div>
   </div>
 </footer>
+<FooterOnlyLogos />

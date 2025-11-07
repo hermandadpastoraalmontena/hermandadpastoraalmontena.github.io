@@ -1,13 +1,10 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
-import cat from "@/assets/cat.webp";
-import es from "@/assets/es.webp";
+import cat from "@/assets/banderas/cat.webp";
+import es from "@/assets/banderas/es.webp";
 const page = Astro.url.pathname;
 const pageId = page[4] === undefined ? "" : page[4];
 const currentLang = Astro.currentLocale || "es";
-
-console.log("pageId:", pageId);
-console.log("currentLang:", currentLang);
 ---
 
 <nav

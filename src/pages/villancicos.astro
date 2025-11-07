@@ -1,0 +1,87 @@
+---
+import Footer from "@/components/Footer.astro";
+import Layout from "@/layouts/Layout.astro";
+import cartel from "@/images/villancicos/cartel.webp";
+---
+
+<Layout title="Festival y Zambomba de villancicos">
+  <section class="flex flex-col gap-8 lg:px-16 px-6">
+    <div class="flex flex-col md:grid md:grid-cols-2 gap-8 items-center mb-8">
+      <img
+        src={cartel.src}
+        alt="Cartel del Festival y Zambomba de villancicos 2025"
+        class="w-96 rounded-md shadow-lg justify-self-end"
+      />
+      <div class="flex flex-col gap-4">
+        <div>
+          <p class="text-center md:text-start font-bold text-red-800">
+            XIII Festival de Villancicos
+          </p>
+          <p>📅 19 de Diciembre del 2025</p>
+          <p>🕒 21:00h</p>
+          <p>📍 Parròquia de Santa Eulàlia de Mèrida</p>
+        </div>
+        <p>
+          Ven a pasar una noche navideña con la actuación de los siguientes
+          coros rocieros:
+        </p>
+        <ul class="list-disc list-inside flex flex-col">
+          <li>Coro Rociero Nuevos Comienzos</li>
+          <li>
+            Coro Rociero Hermandad Virgen de la Rocina de Sant Adrià del Besòs
+          </li>
+          <li>Coro Rociero Hermandad de Terrassa</li>
+          <li>
+            Coro Rociero Hermandad Pastora Almonteña de L'Hospitalet de
+            Llobregat
+          </li>
+        </ul>
+        <div>
+          <p class="text-center md:text-start font-bold text-red-800">
+            VII Zambomba Solidaria
+          </p>
+          <p>📅 20 de Diciembre del 2025</p>
+          <p>
+            🕒 18:30h - Chocolatada ofrecida por el Grup de Festes de Can Serra
+          </p>
+          <p>🕒 19:00h - Villancicos</p>
+          <p>📍 Plaça de la Carpa</p>
+        </div>
+        <p>
+          Ven a pasar una tarde con un chocolatito caliente y disfrutando de los
+          villancicos cantados por los siguientes coros rocieros:
+        </p>
+        <ul class="list-disc list-inside flex flex-col">
+          <li>
+            Coro Rociero Hermandad Los Varales de Santa Coloma de Gramanet
+          </li>
+          <li>Coro Rociero Centro Cultural Andaluz de Mollet del Vallès</li>
+          <li>
+            Coro Rociero Hermandad Pastora Almonteña de L'Hospitalet de
+            Llobregat
+          </li>
+        </ul>
+        <p>
+          En ambos actos la entrada es <strong>gratuita</strong> y se <strong
+            >recogen alimentos</strong
+          >
+          no perecederos de forma voluntaria para donar a personas necesitadas.
+        </p>
+      </div>
+    </div>
+    <p>
+      Una zambomba de villancicos es una tradición navideña de origen andaluz
+      que consiste en reunirse para cantar villancicos acompañados de
+      instrumentos típicos como la zambomba, panderetas, guitarras y otros. Es
+      una forma alegre y festiva de celebrar la Navidad, fomentando la
+      convivencia y el espíritu comunitario entre los participantes.
+    </p>
+    <p>
+      El acto consiste en que los coros rocieros participantes se colocan en
+      círculo entre ellos. El coro que comienza canta un villancico. El que le
+      sigue debe cantar otro villancico diferente, y así sucesivamente hasta 3 o
+      4 villancicos cada coro, creando un ambiente festivo y participativo.
+    </p>
+  </section>
+  <Footer />
+</Layout>

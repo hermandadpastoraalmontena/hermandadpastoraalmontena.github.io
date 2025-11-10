@@ -1,0 +1,293 @@
+---
+import Footer from "@/components/Footer.astro";
+import Layout from "@/layouts/Layout.astro";
+import cartel from "@/images/pregonrociero/cartel.webp";
+import pregonero from "@/images/pregonrociero/pregonero.webp";
+import alcalde from "@/images/pregonrociero/alcalde.webp";
+import presidenta from "@/images/pregonrociero/presidenta.webp";
+import cura from "@/images/pregonrociero/cura.webp";
+import hermanomayor from "@/images/pregonrociero/hermanomayor.webp";
+---
+
+<Layout title="Pregó Rociero">
+  <section class="flex flex-col gap-8 lg:px-16 px-6">
+    <div class="flex flex-col md:grid md:grid-cols-2 gap-8 items-center mb-8">
+      <img
+        src={cartel.src}
+        alt="Cartell del Pregó Rociero 2025"
+        class="w-96 rounded-md shadow-lg justify-self-end"
+      />
+      <div class="flex flex-col gap-4">
+        <div>
+          <p class="text-center md:text-start font-bold text-red-800">
+            Tridu cantat pel cor de l'Hermandad
+          </p>
+          <p>📅 7, 8 i 9 de Maig del 2025</p>
+          <p>🕒 20:30h</p>
+          <a
+            href="https://www.google.com/maps/dir//Iglesia+de+Santa+Eulalia+de+M%C3%A9rida,+Carrer+de+Barcelona,+104,+08901+L'Hospitalet+de+Llobregat,+Barcelona/@41.3597502,2.0965021,16z/data=!3m1!5s0x12a499224e007945:0xe8322ce29ad43b2d!4m17!1m7!3m6!1s0x12a49922453dfb69:0x27cf334486a86e15!2sIglesia+de+Santa+Eulalia+de+M%C3%A9rida!8m2!3d41.3597462!4d2.099077!16s%2Fg%2F1hb_h5flz!4m8!1m0!1m5!1m1!1s0x12a49922453dfb69:0x27cf334486a86e15!2m2!1d2.099077!2d41.3597462!3e3?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-row gap-2 place-items-center"
+          >
+            <p>📍</p>
+            <p
+              class="hover:text-red-800 transition ease-in-out hover:underline"
+            >
+              Parròquia de Santa Eulàlia de Mèrida
+            </p>
+          </a>
+        </div>
+        <div>
+          <p class="text-center md:text-start font-bold text-red-800">
+            Pregó Rociero
+          </p>
+          <p>📅 11 de Maig del 2025</p>
+          <p>🕒 11:00h</p>
+          <a
+            href="https://www.google.com/maps/dir//Auditori+Barradas,+Rambla+Just+Oliveras,+56,+08901+L'Hospitalet+de+Llobregat,+Barcelona/@41.3628805,2.0596243,13z/data=!3m1!4b1!4m13!4m12!1m0!1m5!1m1!1s0x12a49918b224f941:0xdcedf6666cb2e364!2m2!1d2.1008238!2d41.3628234!2m3!6e0!7e2!8j1762546800!3e3?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-row gap-2 place-items-center"
+          >
+            <p>📍</p>
+            <p
+              class="hover:text-red-800 transition ease-in-out hover:underline"
+            >
+              Auditori Barradas
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="w-full text-center">
+      <p class="font-bold text-red-800">Presentadora de l'acte</p>
+      <p>Claudia Prieto Clavijo</p>
+    </div>
+    <div class="w-full text-center">
+      <p class="font-bold text-red-800">Presentador del Pregoner</p>
+      <p>Antonio Delgado Guerrero</p>
+    </div>
+    <div class="w-full text-center">
+      <p class="font-bold text-red-800">Pregoner</p>
+      <p class="text-2xl font-bold">Manuel Márquez de Villamanrique</p>
+    </div>
+    <div class="flex flex-col lg:flex-row gap-8 items-center mb-8 xl:mx-32">
+      <img
+        src={pregonero.src}
+        alt="Manuel Márquez de Villamanrique, Pregonero 2025"
+        class="w-64 rounded-md shadow-lg"
+      />
+      <div class="flex flex-col gap-4">
+        <p>29/11/73, Villamanrique de la Condesa</p>
+        <p>
+          Manuel ha sigut professor al Conservatori Fortea de Madrid i en
+          l'actualitat és professor del Conservatori Juan Vázquez de Badajoz, en
+          l'especialitat de Flamenc.
+        </p>
+        <p>
+          És actor i cantaor de la Compañía de Salvador Távora en la seva obra
+          mítica: “Quejío”. És cantaor i compositor de la companyia malaguenya
+          Jóvenes Clásicos, en l'obra: “Autorretrato Espinel”.
+        </p>
+        <p>
+          Ha pertangut al grup d'escritors andalusos: A.L.D.E.A., al grup decà
+          de les lletres sevillanes: Las Noches del Baratillo, ha col·laborat
+          amb altres col·lectius poètics com: Las Noches del Cangrejo, Chilango
+          Andaluz, L’Almazar, estant present en els festivals internacionals de
+          perfopoesia i fires del llibre. Recentment va treure a la llum, el seu
+          disc-espectacle: De tu mano yo voy. Ha creat espectacles com: Las
+          Fabulas del Guadalquivir o Un solo sentir.
+        </p>
+        <p>
+          Alguns dels seus Pregons Rocieros han sigut en hermandades com: 2002 a
+          Villamanrique de la Condesa, 2003 a San Sebastian de los Reyes, 2004 a
+          Almensilla, 2004 a les festes patronals d'Almensilla, 2005 a
+          Antequera, 2006 en Montequinto, 2006 a Burmujos, 2009 al Cerro del
+          Águila, 2010 a Córdoba, 2011 a Almería, 2012 a Melilla, 2012 a
+          València, etc.
+        </p>
+        <p>
+          Torna a l'atril molt il·lusionat i carregat de responsabilitat,
+          després d'alguns anys sense poder fer-ho per circumstàncies
+          professionals.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col lg:flex-row gap-8 place-items-center mb-8 xl:mx-32"
+    >
+      <img
+        src={alcalde.src}
+        alt="David Quirós Brito, Alcalde de L'Hospitalet de Llobregat 2025"
+        class="w-64 rounded-md shadow-lg"
+      />
+      <div class="flex flex-col gap-4">
+        <div class="w-full text-center">
+          <p class="text-2xl font-bold">David Quirós Brito</p>
+          <p class="text-sm">Alcalde de L'Hospitalet de Llobregat</p>
+        </div>
+        <p>
+          Després d'un any d'espera, els amics i rocieros de l'Hermandad Pastora
+          Almonteña ultimen els preparatius d'una nova edició de la Romería del
+          Rocío en Catalunya, una tradició que recrea en terres catalanes la
+          peregrinació que es fa tots els anys des d'Almonte, a Huelva, fins al
+          santuari de la Verge del Rocío.
+        </p>
+        <p>
+          La lectura del pregó rociero és el punt d'inici d'una nova romeria,
+          exemple de devoció rociera i de participació i convivència. La Romeria
+          del Rocío en Catalunya s'ha consolidat com una de les tradicions més
+          arrelades i és lloc de trobada i de difusió de la cultura andalusa a
+          Catalunya. Un espai per reivindicar la convivència i el diàleg entre
+          les diferents comunitats que formen la societat hospitalense i
+          catalana, ja que reflecteix la seva essència plural i inclusiva.
+        </p>
+        <p class="text-center">GAUDIU DEL CAMÍ!</p>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col lg:flex-row gap-8 place-items-center mb-8 xl:mx-32"
+    >
+      <img
+        src={presidenta.src}
+        alt="Elisabeth Gómez Díaz, Presidenta de l'Hermandad Nuestra Señora del Rocío Pastora Almonteña de L'Hospitalet"
+        class="w-64 rounded-md shadow-lg"
+      />
+      <div class="flex flex-col gap-4">
+        <div class="w-full text-center">
+          <p class="text-2xl font-bold">Elisabeth Gómez Díaz</p>
+          <p class="text-sm">
+            Presidenta de l'Hermandad Nuestra Señora del Rocío Pastora Almonteña
+            de L'Hospitalet
+          </p>
+        </div>
+        <p>
+          Un any més, com a presidenta d'aquesta Hermandad, tinc l'honor
+          d'anunciar-vos el nostre XXVI Pregó Rociero. Arribant maig amb la
+          primavera, el camp s'omple de flors noves, de llunes i promeses. La
+          Marisma comença a bategar i a cada casa fa olor d'amapola i romaní
+          esperant la que serà sens dubte l'antesala al nostre cap de setmana
+          gran: La Romería de Pentecostés. Aquest any és més especial, ja que el
+          Hermano Mayor és part de mi. El meu fill porta aquest any amb orgull a
+          la seva Hermandad a veure-la a Ella.
+        </p>
+        <p>
+          Gaudiu, germans, d'aquest acte tan solemne com és el nostre ansiat
+          pregó que ens farà viure el Rocío d'una manera especial, ens portarà a
+          Ella i ens transmetrà les vivències i sentits del nostre il·lustre
+          pregoner Manuel Márquez de Villamanrique.
+        </p>
+        <p>
+          Com cada primavera, tornaré a somiar amb els camins que em porten a
+          tu.
+        </p>
+        <div class="text-center">
+          <p>VIVA LA VIRGEN DEL ROCÍO</p>
+          <p>VIVA MI HERMANDAD PASTORA ALMONTEÑA</p>
+          <p>Y QUE VIVA LA SANTÍSIMA MADRE DE DIOS</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col lg:flex-row gap-8 place-items-center mb-8 xl:mx-32"
+    >
+      <img
+        src={cura.src}
+        alt="Josep María Romaguera, Rector de la Parròquia de Santa Eulàlia de Mèrida 2025"
+        class="w-64 rounded-md shadow-lg"
+      />
+      <div class="flex flex-col gap-4">
+        <div class="w-full text-center">
+          <p class="text-2xl font-bold">Josep María Romaguera</p>
+          <p class="text-sm">
+            Rector de la Parròquia de Santa Eulàlia de Mèrida
+          </p>
+          <p class="text-sm">Pascua de 2025</p>
+        </div>
+        <p>
+          Immersos en el temps pasqual, que culmina amb la festa de Pentecostés,
+          la Hermandad Rociera Pastora Almonteña es va preparant per a la
+          Romería del Rocío. Recordem els accents. La Pasqua és la gran festa de
+          la nostra lliberació: Crist ha vençut sobre el pecat i sobre la mort,
+          i amb la seva resurrecció ens ha obert les portes de la Vida. La
+          culminació de la Pasqua, Pentecostés, és el do de l' Esperit Sant, do
+          que ens fa el Ressuscitat perquè portem una vida segons l'Evangeli i,
+          amb aquest testimoni de vida, siguem portadors, amb tota l'Església,
+          de l'anunci de l'amor misericordiós que Déu té per a tota la
+          humanitat. Maria, la mare de Jesús, és la primera deixebla i se'ns
+          presenta com a model de vida segons l' Evangeli. Venerar la seva
+          memòria, en aquest cas en l'advocació del Rocío, sempre ens ajuda a
+          recordar quin és el Camí de la vida: Jesucrist.
+        </p>
+        <p>
+          Que la marca de l'amor de Crist que portem en el front, una marca
+          invisible, aquella creu que ens van marcar el dia del nostre Baptisme,
+          ens porti per camins de vida, de fraternitat, de servei. Buscant
+          sempre el bé dels germans, sobretot dels més vulnerables.
+        </p>
+        <p class="text-center">BON ROCÍO A TOTS!</p>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col lg:flex-row gap-8 place-items-center mb-8 xl:mx-32"
+    >
+      <img
+        src={hermanomayor.src}
+        alt="Xavi Puche Gómez, Hermano Mayor de l'Hermandad Nuestra Señora del Rocío Pastora Almonteña de L'Hospitalet 2025"
+        class="w-64 rounded-md shadow-lg"
+      />
+      <div class="flex flex-col gap-4">
+        <div class="w-full text-center">
+          <p class="text-2xl font-bold">Xavi Puche Gómez</p>
+          <p class="text-sm">
+            Hermano Mayor de l'Hermandad Nuestra Señora del Rocío Pastora
+            Almonteña de L'Hospitalet
+          </p>
+        </div>
+        <p>
+          Els carrers s'omplen de flors, alegria i flor de taronger quan arriba
+          la primavera, és per això que és l'estació de l'any, que ens brinda el
+          diví, el celestial i l'humà, i on un any més caminarem cap a ella per
+          camins beneïts.
+        </p>
+        <p>
+          Camins plens d'amor, fraternitat, afecte, companyerisme i germanor,
+          fins a arribar a les seves plantes i així poder viure aquest beneït
+          moment d'estar junt a Ella, de voler-la i estimar-la, i mostrar el
+          nostre amor cap a Maria Santíssima del Rocío.
+        </p>
+        <p>
+          Considero que el Rocío és indescriptible per a qualsevol que se senti
+          rociero i li rendeixi devoció a Ella, aquest moment que esperem durant
+          tot l'any i que se'ns fa molt curt.
+        </p>
+        <p>
+          I per mi, no hi ha major privilegi i que des de petit he somiat, que
+          és poder portar la meva hermandad pels camins i sempre cantant, perquè
+          la Mare de Déu està esperant.
+        </p>
+        <div class="text-center">
+          <p>VIVA LA VIRGEN DEL ROCÍO</p>
+          <p>VIVA LA BLANCA PALOMA</p>
+          <p>VIVA LA REINA DE LAS MARISMAS</p>
+          <p>VIVA SU DIVINO HIJO</p>
+          <p>VIVA MI HERMANDAD PASTORA ALMONTEÑA</p>
+          <p>Y QUE VIVA LA SANTÍSIMA MADRE DE DIOS</p>
+        </div>
+      </div>
+    </div>
+    <p>
+      Un pregó rociero és un discurs emotiu i poètic que anuncia la llegada de
+      la Romeria del Rocío. El pronuncia un pregoner o pregonera per exaltar la
+      fe, la tradició i l'esperit rociero. S'acostuma a incloure vivències,
+      música i versos dedicats a la Verge del Rocío. És el punt de partida
+      simbòlic que encén l'emoció del camí cap a El Rocío.
+    </p>
+  </section>
+  <Footer />
+</Layout>

@@ -1,7 +1,12 @@
 ---
 import Footer from "@/components/Footer.astro";
 import Layout from "@/layouts/Layout.astro";
-import cartel from "@/images/cambiodevara/cartel.webp";
+import cartel from "@/images/pregonrociero/cartel.webp";
+import pregonero from "@/images/pregonrociero/pregonero.webp";
+import alcalde from "@/images/pregonrociero/alcalde.webp";
+import presidenta from "@/images/pregonrociero/presidenta.webp";
+import cura from "@/images/pregonrociero/cura.webp";
+import hermanomayor from "@/images/pregonrociero/hermanomayor.webp";
 ---
 
 <Layout title="Pregón Rociero">
@@ -19,65 +24,273 @@ import cartel from "@/images/cambiodevara/cartel.webp";
           </p>
           <p>📅 7, 8 y 9 de Mayo del 2025</p>
           <p>🕒 20:30h</p>
-          <p>📍 Parròquia de Santa Eulàlia de Mèrida</p>
+          <a
+            href="https://www.google.com/maps/dir//Iglesia+de+Santa+Eulalia+de+M%C3%A9rida,+Carrer+de+Barcelona,+104,+08901+L'Hospitalet+de+Llobregat,+Barcelona/@41.3597502,2.0965021,16z/data=!3m1!5s0x12a499224e007945:0xe8322ce29ad43b2d!4m17!1m7!3m6!1s0x12a49922453dfb69:0x27cf334486a86e15!2sIglesia+de+Santa+Eulalia+de+M%C3%A9rida!8m2!3d41.3597462!4d2.099077!16s%2Fg%2F1hb_h5flz!4m8!1m0!1m5!1m1!1s0x12a49922453dfb69:0x27cf334486a86e15!2m2!1d2.099077!2d41.3597462!3e3?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-row gap-2 place-items-center"
+          >
+            <p>📍</p>
+            <p
+              class="hover:text-red-800 transition ease-in-out hover:underline"
+            >
+              Parròquia de Santa Eulàlia de Mèrida
+            </p>
+          </a>
         </div>
         <div>
           <p class="text-center md:text-start font-bold text-red-800">
-            Triduo cantado por el coro de la Hermandad
+            Pregón Rociero
           </p>
           <p>📅 11 de Mayo del 2025</p>
           <p>🕒 11:00h</p>
-          <p>📍 Auditori Barradas</p>
+          <a
+            href="https://www.google.com/maps/dir//Auditori+Barradas,+Rambla+Just+Oliveras,+56,+08901+L'Hospitalet+de+Llobregat,+Barcelona/@41.3628805,2.0596243,13z/data=!3m1!4b1!4m13!4m12!1m0!1m5!1m1!1s0x12a49918b224f941:0xdcedf6666cb2e364!2m2!1d2.1008238!2d41.3628234!2m3!6e0!7e2!8j1762546800!3e3?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-row gap-2 place-items-center"
+          >
+            <p>📍</p>
+            <p
+              class="hover:text-red-800 transition ease-in-out hover:underline"
+            >
+              Auditori Barradas
+            </p>
+          </a>
         </div>
+      </div>
+    </div>
+    <div class="w-full text-center">
+      <p class="font-bold text-red-800">Presentadora del acto</p>
+      <p>Claudia Prieto Clavijo</p>
+    </div>
+    <div class="w-full text-center">
+      <p class="font-bold text-red-800">Presentador del Pregonero</p>
+      <p>Antonio Delgado Guerrero</p>
+    </div>
+    <div class="w-full text-center">
+      <p class="font-bold text-red-800">Pregonero</p>
+      <p class="text-2xl font-bold">Manuel Márquez de Villamanrique</p>
+    </div>
+    <div class="flex flex-col lg:flex-row gap-8 items-center mb-8 xl:mx-32">
+      <img
+        src={pregonero.src}
+        alt="Manuel Márquez de Villamanrique, Pregonero 2025"
+        class="w-64 rounded-md shadow-lg"
+      />
+      <div class="flex flex-col gap-4">
+        <p>29/11/73, Villamanrique de la Condesa</p>
         <p>
-          Posteriormente, ofreceremos un vino de honor en nuestra sede social
-          del Centro Cultural Claveles
+          Manuel ha sido profesor en el Conservatorio Fortea de Madrid y en la
+          actualidad es profesor del Conservatorio Juan Vázquez de Badajoz, en
+          la especialidad de Flamenco.
+        </p>
+        <p>
+          Es actor y cantaor de la Compañía de Salvador Távora en su obra
+          mítica: “Quejío”. Es cantaor y compositor de la compañía malagueña
+          Jóvenes Clásicos, en la obra: “Autorretrato Espinel”.
+        </p>
+        <p>
+          Ha pertenecido al grupo de escritores andaluces: A.L.D.E.A., al grupo
+          decano de las letras sevillanas: Las Noches del Baratillo, ha
+          colaborado con otros colectivos poéticos como: Las Noches del
+          Cangrejo, Chilango Andaluz, L’Almazar, estando presente en los
+          festivales internacionales de perfopoesía y ferias del libro.
+          Recientemente sacó a la luz, su disco-espectáculo: De tu mano yo voy.
+          Ha creado espectáculos como: Las Fabulas del Guadalquivir o Un solo
+          sentir.
+        </p>
+        <p>
+          Algunos de sus Pregones Rocieros han sido en hermandades como: 2002 en
+          Villamanrique de la Condesa, 2003 en San Sebastian de los Reyes, 2004
+          en Almensilla, 2004 en las fiestas patronales de Almensilla, 2005 en
+          Antequera, 2006 en Montequinto, 2006 en Burmujos, 2009 el Cerro del
+          Águila, 2010 en Córdoba, 2011 en Almería, 2012 en Melilla, 2012 en
+          Valencia, etc.
+        </p>
+        <p>
+          Vuelve al atril muy ilusionado y cargado de responsabilidad, después
+          de algunos años sin poder hacerlo por circunstancias profesionales.
         </p>
       </div>
     </div>
-    <p>
-      El Cambio de vara es uno de los actos más importantes del año para una
-      Hermandad Rociera.
-    </p>
-    <p>
-      En este acto, se ofrece una misa y, antes de la salve, se realiza el
-      cambio de vara en el altar de la iglesia. El cambio de vara consiste en
-      que el actual Hermano Mayor* de la Hermandad, tras haber cumplido su
-      mandato (normalmente un año), entrega la vara de Hermano Mayor al nuevo
-      Hermano Mayor entrante.
-    </p>
-    <p>
-      También se intercambian los cargos de los portadores de los estandartes
-      representativos de la Hermandad: simpecao, guión o bacalao y banderín**.
-    </p>
-    <p>
-      La Hermandad obsequia al Hermano Mayor con un recuerdo de su mandato y con
-      una vara de caminante y, antes de abandonar el altar, el Hermano Mayor
-      saliente dirige unas palabras a los asistentes comentando su mandato y
-      agradeciendo el apoyo recibido.
-    </p>
-    <p>
-      Finalmente, se ofrece un vino de honor en la sede social de la Hermandad a
-      todos los asistentes al acto.
-    </p>
-    <div class="flex flex-col gap-2">
-      <p class="text-left w-full italic text-sm">
-        * El hermano mayor de una hermandad rociera es el mayor representante de
-        la hermandad, encargado de organizar y representarla en los actos
-        religiosos y festivos, especialmente durante la romería del Rocío. Es un
-        miembro elegido por los demás miembros de la hermandad y suele regentar
-        ese título durante un año.
-      </p>
-      <p class="text-left w-full italic text-sm">
-        ** El "Simpecao" es el estandarte o bandera de una hermandad rociera,
-        que suele llevar una imagen de la Virgen del Rocío. Es un símbolo muy
-        importante dentro de la hermandad, ya que representa a la Virgen y a los
-        rocieros que la siguen. El guión o bacalao es otro estandarte que suelen
-        llevar las hermandades rocieras que representa a la ciudad donde reside
-        la hermandad, y el banderín es una pequeña bandera que también se
-        utiliza en los actos rocieros.
-      </p>
+
+    <div
+      class="flex flex-col lg:flex-row gap-8 place-items-center mb-8 xl:mx-32"
+    >
+      <img
+        src={alcalde.src}
+        alt="David Quirós Brito, Alcalde de L'Hospitalet de Llobregat 2025"
+        class="w-64 rounded-md shadow-lg"
+      />
+      <div class="flex flex-col gap-4">
+        <div class="w-full text-center">
+          <p class="text-2xl font-bold">David Quirós Brito</p>
+          <p class="text-sm">Alcalde de L'Hospitalet de Llobregat</p>
+        </div>
+        <p>
+          Tras un año de espera, los amigos y rocieros de la Hermandad Pastora
+          Almonteña ultiman los preparativos de una nueva edición de la Romería
+          del Rocío en Catalunya, una tradición que recrea en tierras catalanas
+          la peregrinación que se hace todos los años desde Almonte, en Huelva,
+          hasta el santuario de la Virgen del Rocío.
+        </p>
+        <p>
+          La lectura del pregón rociero es el punto de inicio de una nueva
+          romería, ejemplo de devoción rociera y de participación y convivencia.
+          La Romería del Rocío en Catalunya se ha consolidado como una de las
+          tradiciones más arraigadas y es lugar de encuentro y de difusión de la
+          cultura andaluza en Catalunya. Un espacio para reivindicar la
+          convivencia y el diálogo entre las diferentes comunidades que forman
+          la sociedad hospitalense y catalana, ya que refleja su esencia plural
+          e inclusiva.
+        </p>
+        <p class="text-center">¡QUE DISFRUTÉIS DEL CAMINO!</p>
+      </div>
     </div>
+
+    <div
+      class="flex flex-col lg:flex-row gap-8 place-items-center mb-8 xl:mx-32"
+    >
+      <img
+        src={presidenta.src}
+        alt="Elisabeth Gómez Díaz, Presidenta de la Hermandad Nuestra Señora del Rocío Pastora Almonteña de L'Hospitalet"
+        class="w-64 rounded-md shadow-lg"
+      />
+      <div class="flex flex-col gap-4">
+        <div class="w-full text-center">
+          <p class="text-2xl font-bold">Elisabeth Gómez Díaz</p>
+          <p class="text-sm">
+            Presidenta de la Hermandad Nuestra Señora del Rocío Pastora
+            Almonteña de L'Hospitalet
+          </p>
+        </div>
+        <p>
+          Un año más, como presidenta de esta Hermandad, tengo el honor de
+          anunciaros nuestro XXVI Pregón Rociero. Llegando mayo con la
+          primavera, el campo se llena de flores nuevas, de lunares y promesas.
+          La Marisma empieza a latir y en cada casa huele a amapola y romero
+          esperando la que será sin duda la antesala a nuestro fin de semana
+          grande: La Romería de Pentecostés. Este año es más especial, pues el
+          Hermano Mayor es parte de mí. Mi hijo lleva este año con orgullo a su
+          Hermandad a verla a Ella.
+        </p>
+        <p>
+          Disfrutad, hermanos, de este acto tan solemne como es nuestro ansiado
+          pregón que nos hará vivir el Rocío de una manera especial, nos llevará
+          a Ella y nos transmitirá las vivencias y sentires de nuestro ilustre
+          pregonero Manuel Márquez de Villamanrique.
+        </p>
+        <p>
+          Como cada primavera, volveré a soñar con los caminos que me llevan a
+          ti.
+        </p>
+        <div class="text-center">
+          <p>VIVA LA VIRGEN DEL ROCÍO</p>
+          <p>VIVA MI HERMANDAD PASTORA ALMONTEÑA</p>
+          <p>Y QUE VIVA LA SANTÍSIMA MADRE DE DIOS</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col lg:flex-row gap-8 place-items-center mb-8 xl:mx-32"
+    >
+      <img
+        src={cura.src}
+        alt="Josep María Romaguera, Rector de la Parròquia de Santa Eulàlia de Mèrida 2025"
+        class="w-64 rounded-md shadow-lg"
+      />
+      <div class="flex flex-col gap-4">
+        <div class="w-full text-center">
+          <p class="text-2xl font-bold">Josep María Romaguera</p>
+          <p class="text-sm">
+            Rector de la Parròquia de Santa Eulàlia de Mèrida
+          </p>
+          <p class="text-sm">Pascua de 2025</p>
+        </div>
+        <p>
+          Inmersos en el tiempo pascual, que culmina con la fiesta de
+          Pentecostés, la Hermandad Rociera Pastora Almonteña se va preparando
+          para la Romería del Rocío. Recordemos los acentos. La Pascua es la
+          gran fiesta de nuestra liberación: Cristo ha vencido sobre el pecado y
+          sobre la muerte, y con su resurrección nos ha abierto las puertas de
+          la Vida. La culminación de la Pascua, Pentecostés, es el don del
+          Espíritu Santo, don que nos hace el Resucitado para que llevemos una
+          vida según el Evangelio y, con este testimonio de vida, seamos
+          portadores, con toda la Iglesia, del anuncio del amor misericordioso
+          que Dios tiene para toda la humanidad. María, la madre de Jesús, es la
+          primera discípula y se nos presenta como modelo de vida según el
+          Evangelio. Venerar su memoria, en este caso en la advocación del
+          Rocío, siempre nos ayuda a recordar cual es el Camino de la vida:
+          Jesucristo.
+        </p>
+        <p>
+          Que la marca del amor de Cristo que llevamos en la frente, una marca
+          invisible, aquella cruz que nos marcaron el día de nuestro Bautismo,
+          nos lleve por caminos de vida, de fraternidad, de servicio. Buscando
+          siempre el bien de los hermanos, sobre todo de los más vulnerables.
+        </p>
+        <p class="text-center">¡BUEN ROCÍO A TODOS!</p>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col lg:flex-row gap-8 place-items-center mb-8 xl:mx-32"
+    >
+      <img
+        src={hermanomayor.src}
+        alt="Xavi Puche Gómez, Hermano Mayor de la Hermandad Nuestra Señora del Rocío Pastora Almonteña de L'Hospitalet 2025"
+        class="w-64 rounded-md shadow-lg"
+      />
+      <div class="flex flex-col gap-4">
+        <div class="w-full text-center">
+          <p class="text-2xl font-bold">Xavi Puche Gómez</p>
+          <p class="text-sm">
+            Hermano Mayor de la Hermandad Nuestra Señora del Rocío Pastora
+            Almonteña de L'Hospitalet
+          </p>
+        </div>
+        <p>
+          Las calles se llenan de flores, alegría y azahar cuando llega la
+          primavera, es por ello que es la estación del año, que nos brinda lo
+          divino, lo celestial y lo humano, y donde un año más caminaremos hacia
+          ella por benditos caminos.
+        </p>
+        <p>
+          Caminos llenos de amor, fraternidad, cariño, compañerismo y hermandad,
+          hasta llegar a sus plantas y así poder vivir ese bendito momento de
+          estar junto a Ella, de quererla y amarla, y mostrar nuestro amor hacia
+          María Santísima del Rocío.
+        </p>
+        <p>
+          Considero que el Rocío es indescriptible para cualquiera que se sienta
+          rociero y le rinda devoción a Ella, ese momento que esperamos durante
+          todo el año y que se nos hace muy corto.
+        </p>
+        <p>
+          Y para mí no hay mayor privilegio y que desde niño he soñado, que es
+          poder llevar a mi hermandad por los caminos y siempre cantando, porque
+          la Madre de Dios está esperando.
+        </p>
+        <div class="text-center">
+          <p>VIVA LA VIRGEN DEL ROCÍO</p>
+          <p>VIVA LA BLANCA PALOMA</p>
+          <p>VIVA LA REINA DE LAS MARISMAS</p>
+          <p>VIVA SU DIVINO HIJO</p>
+          <p>VIVA MI HERMANDAD PASTORA ALMONTEÑA</p>
+          <p>Y QUE VIVA LA SANTÍSIMA MADRE DE DIOS</p>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Un pregón rociero es un discurso emotivo y poético que anuncia la llegada
+      de la Romería del Rocío. Lo pronuncia un pregonero o pregonera para
+      exaltar la fe, la tradición y el espíritu rociero. Suele incluir
+      vivencias, música y versos dedicados a la Virgen del Rocío. Es el punto de
+      partida simbólico que enciende la emoción del camino hacia El Rocío.
+    </p>
   </section>
   <Footer />
 </Layout>

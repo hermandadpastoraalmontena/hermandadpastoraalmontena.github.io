@@ -116,6 +116,13 @@ const pageId =
       >{currentLang === "cat" ? "Sant Jordi" : "Sant Jordi"}</a
     >
     <a
+      href={getRelativeLocaleUrl(currentLang, `/chiringuito`)}
+      class={pageId === "chiringuito"
+        ? "text-red-800 border-red-800 font-bold pointer-events-none opacity-30"
+        : "hover:text-red-800 hover:scale-105 transition pointer-events-none opacity-30"}
+      >{currentLang === "cat" ? "Chiringuito" : "Chiringuito"}</a
+    >
+    <a
       href={getRelativeLocaleUrl(currentLang, `/coro`)}
       class={pageId === "coro"
         ? "text-red-800 border-red-800 font-bold pointer-events-none opacity-30"

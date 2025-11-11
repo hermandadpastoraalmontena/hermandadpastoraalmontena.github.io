@@ -49,6 +49,10 @@ const pageId =
                 : "Festival y Zambomba de villancicos";
             case "santjordi":
               return currentLang === "cat" ? "Sant Jordi" : "Sant Jordi";
+            case "festamajor":
+              return currentLang === "cat"
+                ? "Festa Major Can Serra"
+                : "Fiesta Mayor Can Serra";
             case "coro":
               return currentLang === "cat" ? "Cor" : "Coro";
             case "juntadirectiva":
@@ -116,10 +120,10 @@ const pageId =
       >{currentLang === "cat" ? "Sant Jordi" : "Sant Jordi"}</a
     >
     <a
-      href={getRelativeLocaleUrl(currentLang, `/fiestamayor`)}
-      class={pageId === "fiestamayor"
-        ? "text-red-800 border-red-800 font-bold pointer-events-none opacity-30"
-        : "hover:text-red-800 hover:scale-105 transition pointer-events-none opacity-30"}
+      href={getRelativeLocaleUrl(currentLang, `/festamajor`)}
+      class={pageId === "festamajor"
+        ? "text-red-800 border-red-800 font-bold"
+        : "hover:text-red-800 hover:scale-105 transition"}
       >{
         currentLang === "cat"
           ? "Festa Major Can Serra"

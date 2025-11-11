@@ -1,0 +1,89 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/components/Footer.astro";
+import cartel from "@/images/festamajor/cartel.webp";
+import listaprecios1 from "@/images/festamajor/listaprecios1.webp";
+import listaprecios2 from "@/images/festamajor/listaprecios2.webp";
+import listaprecios3 from "@/images/festamajor/listaprecios3.webp";
+import listaprecios4 from "@/images/festamajor/listaprecios4.webp";
+import platoinfantil from "@/images/festamajor/platoinfantil.webp";
+---
+
+<Layout title="Fiesta Mayor Can Serra">
+  <section class="lg:px-16 px-6 grid grid-rows-[auto] gap-4">
+    <div class="flex flex-col md:grid md:grid-cols-2 gap-8 items-center mb-8">
+      <img
+        src={cartel.src}
+        alt="Cartel del Cambio de Vara 2025"
+        class="w-96 rounded-md shadow-lg justify-self-end"
+      />
+      <div class="flex flex-col gap-4">
+        <div>
+          <p>📅 Del 12 al 15 de Junio del 2025</p>
+          <a
+            href="https://www.google.com/maps/dir//Pla%C3%A7a+de+la+Carpa,+08906+L'Hospitalet+de+Llobregat,+Barcelona/@41.3661315,2.0998931,16.75z/data=!4m17!1m7!3m6!1s0x12a499b465110c3f:0x698ab488861df456!2sPla%C3%A7a+de+la+Carpa!8m2!3d41.3664683!4d2.1000046!16s%2Fg%2F11gzpnfcq7!4m8!1m0!1m5!1m1!1s0x12a499b465110c3f:0x698ab488861df456!2m2!1d2.1000046!2d41.3664683!3e2?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-row gap-2 place-items-center"
+          >
+            <p>📍</p>
+            <p
+              class="hover:text-red-800 transition ease-in-out hover:underline"
+            >
+              Barrio de Can Serra, L'Hospitalet de Llobregat
+            </p>
+          </a>
+        </div>
+        <p>
+          Desde hace ya varios años, la Hermandad Rociera Pastora Almonteña de
+          L'Hospitalet de Llobregat, debido a su gran conexión con el barrio de
+          Can Serra y todos sus habitantes, participa activamente en la Fiesta
+          Mayor de Can Serra con su chiringuito y la misa rociera.
+        </p>
+      </div>
+    </div>
+    <div
+      class="w-full flex flex-col justify-center place-items-center gap-1 text-center text-xl md:text-3xl lg:text-5xl font-bold mt-4"
+    >
+      <p>LISTA DE PRECIOS CHIRINGUITO</p>
+      <p>FIESTA MAYOR CAN SERRA 2025</p>
+    </div>
+    <div class="flex flex-col justify-center place-items-center">
+      <img
+        src={listaprecios1.src}
+        alt="Lista de precios Fiesta Mayor Can Serra 2025"
+        class="w-[50rem]"
+      />
+      <img
+        src={listaprecios2.src}
+        alt="Lista de precios Fiesta Mayor Can Serra 2025"
+        class="w-[50rem]"
+      />
+      <img
+        src={listaprecios3.src}
+        alt="Lista de precios Fiesta Mayor Can Serra 2025"
+        class="w-[50rem]"
+      />
+      <img
+        src={listaprecios4.src}
+        alt="Lista de precios Fiesta Mayor Can Serra 2025"
+        class="w-[50rem]"
+      />
+      <img
+        src={platoinfantil.src}
+        alt="Lista de precios Fiesta Mayor Can Serra 2025"
+        class="w-[50rem]"
+      />
+    </div>
+    <a
+      href="https://wp.lh-on.cat/wp-content/uploads/2025/06/25-FULLET-FM-Can-Serra-web-CAT.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="w-full flex flex-col justify-center place-items-center gap-1 text-center text-xl md:text-3xl lg:text-5xl font-bold mt-4 hover:text-red-800 transition-colors"
+    >
+      <p>VER EL PROGRAMA DE ACTIVIDADES</p>
+      <p>DE LA FIESTA MAYOR CAN SERRA 2025</p>
+    </a>
+  </section>
+  <Footer />
+</Layout>

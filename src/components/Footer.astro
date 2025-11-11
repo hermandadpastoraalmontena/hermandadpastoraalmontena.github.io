@@ -10,7 +10,7 @@ const currentLang = Astro.currentLocale || "es";
 >
   <a
     href={getRelativeLocaleUrl(currentLang, `/`)}
-    class="flex flex-col gap-[4px] justify-center place-items-center"
+    class="flex flex-col gap-[4px] justify-center place-items-center hover:scale-[101%] transition ease-in-out"
   >
     <img src={medal.src} alt="Medal Icon" class="w-12 h-12" />
     <p class="hidden lg:block text-sm text-center">

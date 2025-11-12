@@ -1,0 +1,53 @@
+---
+import Footer from "@/components/Footer.astro";
+import Layout from "@/layouts/Layout.astro";
+import cartel from "@/images/santjordi/cartel.webp";
+---
+
+<Layout title="Sant Jordi">
+  <section class="flex flex-col gap-8 lg:px-16 px-6">
+    <div class="flex flex-col md:grid md:grid-cols-2 gap-8 items-center mb-8">
+      <img
+        src={cartel.src}
+        alt="Cartel del Sant Jordi 2025"
+        class="w-[30rem] rounded-md shadow-lg justify-self-end"
+      />
+      <div class="flex flex-col gap-4">
+        <div>
+          <p>📅 23 d'Abril del 2025</p>
+          <p>🕒 09:00h fins el final d'existències</p>
+          <a
+            href="https://www.google.com/maps/dir//Plaza+de+la+Carpa,+08906+L'Hospitalet+de+Llobregat,+Barcelona/@41.3664723,2.0974297,16z/data=!4m17!1m7!3m6!1s0x12a499b465110c3f:0x698ab488861df456!2sPlaza+de+la+Carpa!8m2!3d41.3664683!4d2.1000046!16s%2Fg%2F11gzpnfcq7!4m8!1m0!1m5!1m1!1s0x12a499b465110c3f:0x698ab488861df456!2m2!1d2.1000046!2d41.3664683!3e3?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex flex-row gap-2 place-items-center"
+          >
+            <p>📍</p>
+            <p
+              class="hover:text-red-800 transition ease-in-out hover:underline"
+            >
+              Plaça de la Carpa
+            </p>
+          </a>
+        </div>
+        <p>
+          "𝑺𝒂𝒏𝒕 𝑱𝒐𝒓𝒅𝒊 𝒗𝒂 𝒓𝒆𝒎𝒂𝒕𝒂𝒓 𝒆𝒍 𝒅𝒓𝒂𝒄, 𝒒𝒖𝒆 𝒆𝒏 𝒎𝒐𝒓𝒊𝒓 𝒆𝒔 𝒗𝒂 𝒇𝒐𝒏𝒅𝒓𝒆 𝒂 𝒕𝒆𝒓𝒓𝒂. 𝑰
+          𝒅𝒂𝒗𝒂𝒏𝒕 𝒅𝒆𝒍𝒔 𝒖𝒍𝒍𝒔 𝒂𝒅𝒎𝒊𝒓𝒂𝒕𝒔 𝒅𝒆 𝒕𝒐𝒕𝒉𝒐𝒎, 𝒂𝒍𝒍𝒊 𝒐𝒏 𝒆𝒍 𝒅𝒓𝒂𝒄 𝒔’𝒉𝒂𝒗𝒊𝒂 𝒇𝒐𝒔, 𝒗𝒂
+          𝒏𝒆𝒊𝒙𝒆𝒓 𝒂 𝒍’𝒂𝒄𝒕𝒆 𝒖𝒏 𝒓𝒐𝒔𝒆𝒓 𝒅𝒆 𝒓𝒐𝒔𝒆𝒔 𝒗𝒆𝒓𝒎𝒆𝒍𝒍𝒆𝒔 𝒄𝒐𝒎 𝒍𝒂 𝒔𝒂𝒏𝒈."
+        </p>
+        <p>¡Aquest any tornem en Sant Jordi amb la nostra venda de roses! 🌹</p>
+        <p>
+          Des de les 9h fins al final d'existències, estarem a la Plaça de la
+          Carpa per a tothom que vulgui regalar una rosa a la seva persona
+          especial.
+        </p>
+      </div>
+    </div>
+    <p>
+      Des de fa uns anys, l'Hermandad de la Pastora Almonteña de L'Hospitalet de
+      Llobregat celebra el dia de Sant Jordi amb una venda de roses per recaptar
+      fons destinats a les activitats i projectes de l'Hermandad.
+    </p>
+  </section>
+  <Footer />
+</Layout>

@@ -1,0 +1,209 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import cat from "@/assets/banderas/cat.webp";
+import es from "@/assets/banderas/es.webp";
+import menu from "@/assets/svg/menu.svg";
+const currentLang = Astro.currentLocale || "es";
+const page = Astro.url.pathname;
+const pagedivided = page.split("/");
+const pageId =
+  currentLang === "cat"
+    ? pagedivided[2] === null
+      ? ""
+      : pagedivided[2]
+    : pagedivided[1];
+---
+
+<nav
+  class="flex flex-col justify-start w-full place-items-center gap-4 p-4 md:px-8"
+>
+  <div
+    class="grid grid-cols-2 md:grid-cols-3 w-full justify-center place-items-center"
+  >
+    <button
+      class="flex flex-row gap-1 place-items-center justify-self-start justify-center bg-red-800 hover:bg-red-900 transition ease-in-out w-24 md:w-28 rounded-2xl p-2 cursor-pointer"
+      id="menu-button"
+    >
+      <img src={menu.src} alt="Menu" class="w-6 h-6 md:w-8 md:h-8" />
+      <span class="font-bold text-white text-sm md:text-base">Menú</span>
+    </button>
+    <span class="text-md md:text-xl text-red-800 font-black">
+      {
+        (() => {
+          switch (pageId) {
+            case "":
+              return currentLang === "cat"
+                ? "Sobre nosaltres"
+                : "Sobre nosotros";
+            case "romeriadelrocio":
+              return currentLang === "cat"
+                ? "Romería del Rocío"
+                : "Romería del Rocío";
+            case "pregonrociero":
+              return currentLang === "cat" ? "Pregó Rociero" : "Pregón Rociero";
+            case "cambiodevara":
+              return currentLang === "cat" ? "Canvi de Vara" : "Cambio de Vara";
+            case "villancicos":
+              return currentLang === "cat"
+                ? "Festival i Zambomba de nadales"
+                : "Festival y Zambomba de villancicos";
+            case "santjordi":
+              return currentLang === "cat" ? "Sant Jordi" : "Sant Jordi";
+            case "festamajor":
+              return currentLang === "cat"
+                ? "Festa Major Can Serra"
+                : "Fiesta Mayor Can Serra";
+            case "coro":
+              return currentLang === "cat" ? "Cor" : "Coro";
+            case "juntadirectiva":
+              return currentLang === "cat"
+                ? "Junta Directiva"
+                : "Junta Directiva";
+            default:
+              return currentLang === "cat"
+                ? "Sobre nosaltres"
+                : "Sobre nosotros";
+          }
+        })()
+      }
+    </span>
+  </div>
+
+  <div
+    class="w-full p-4 shadow-md flex-col justify-center place-items-center text-center gap-2 rounded-2xl hidden opacity-0 max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+    id="menu-div"
+  >
+    <a
+      href={getRelativeLocaleUrl(currentLang, `/`)}
+      class={pageId === ""
+        ? "text-red-800 border-red-800 font-bold"
+        : "hover:text-red-800 hover:scale-105 transition"}
+      >{currentLang === "cat" ? "Sobre nosaltres" : "Sobre nosotros"}</a
+    >
+    <a
+      href={getRelativeLocaleUrl(currentLang, `/romeriadelrocio`)}
+      class={pageId === "romeriadelrocio"
+        ? "text-red-800 border-red-800 font-bold"
+        : "hover:text-red-800 hover:scale-105 transition"}
+      >{currentLang === "cat" ? "Romería del Rocío" : "Romería del Rocío"}</a
+    >
+    <a
+      href={getRelativeLocaleUrl(currentLang, `/pregonrociero`)}
+      class={pageId === "pregonrociero"
+        ? "text-red-800 border-red-800 font-bold"
+        : "hover:text-red-800 hover:scale-105 transition"}
+      >{currentLang === "cat" ? "Pregó Rociero" : "Pregón Rociero"}</a
+    >
+    <a
+      href={getRelativeLocaleUrl(currentLang, `/cambiodevara`)}
+      class={pageId === "cambiodevara"
+        ? "text-red-800 border-red-800 font-bold"
+        : "hover:text-red-800 hover:scale-105 transition"}
+      >{currentLang === "cat" ? "Canvi de Vara" : "Cambio de Vara"}</a
+    >
+    <a
+      href={getRelativeLocaleUrl(currentLang, `/villancicos`)}
+      class={pageId === "villancicos"
+        ? "text-red-800 border-red-800 font-bold"
+        : "hover:text-red-800 hover:scale-105 transition"}
+      >{
+        currentLang === "cat"
+          ? "Festival i Zambomba de nadales"
+          : "Festival y Zambomba de villancicos"
+      }</a
+    >
+    <a
+      href={getRelativeLocaleUrl(currentLang, `/santjordi`)}
+      class={pageId === "santjordi"
+        ? "text-red-800 border-red-800 font-bold"
+        : "hover:text-red-800 hover:scale-105 transition"}
+      >{currentLang === "cat" ? "Sant Jordi" : "Sant Jordi"}</a
+    >
+    <a
+      href={getRelativeLocaleUrl(currentLang, `/festamajor`)}
+      class={pageId === "festamajor"
+        ? "text-red-800 border-red-800 font-bold"
+        : "hover:text-red-800 hover:scale-105 transition"}
+      >{
+        currentLang === "cat"
+          ? "Festa Major Can Serra"
+          : "Fiesta Mayor Can Serra"
+      }</a
+    >
+    <a
+      href={getRelativeLocaleUrl(currentLang, `/coro`)}
+      class={pageId === "coro"
+        ? "text-red-800 border-red-800 font-bold"
+        : "hover:text-red-800 hover:scale-105 transition"}
+      >{currentLang === "cat" ? "Cor" : "Coro"}</a
+    >
+    <a
+      href={getRelativeLocaleUrl(currentLang, `/juntadirectiva`)}
+      class={pageId === "juntadirectiva"
+        ? "text-red-800 border-red-800 font-bold"
+        : "hover:text-red-800 hover:scale-105 transition"}
+      >{currentLang === "cat" ? "Junta Directiva" : "Junta Directiva"}</a
+    >
+    <div class="flex flex-row gap-4 mt-4">
+      <a
+        href={getRelativeLocaleUrl("es", `/${pageId ? pageId : ""}`)}
+        class="place-self-end hover:scale-105 transition ease-in-out"
+      >
+        <img
+          src={es.src}
+          alt={currentLang === "cat"
+            ? "Bandera d'Espanya"
+            : "Bandera de España"}
+          title={currentLang === "cat"
+            ? "Canviar a castellà"
+            : "Cambiar a castellano"}
+          class="w-10 mx-auto"
+        />
+      </a>
+      <a
+        href={getRelativeLocaleUrl("cat", `/${pageId ? pageId : ""}`)}
+        class="place-self-end hover:scale-105 transition ease-in-out"
+      >
+        <img
+          src={cat.src}
+          alt={currentLang === "cat"
+            ? "Bandera de Catalunya"
+            : "Bandera de Cataluña"}
+          title={currentLang === "cat"
+            ? "Canviar a català"
+            : "Cambiar a catalán"}
+          class="w-10 mx-auto"
+        />
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const button = document.getElementById("menu-button");
+  const menu = document.getElementById("menu-div");
+
+  button?.addEventListener("click", () => {
+    if (menu) {
+      const isHidden = menu.classList.contains("hidden");
+
+      if (isHidden) {
+        menu.classList.remove("hidden");
+        menu.classList.add("flex");
+
+        void menu.offsetHeight;
+
+        menu.classList.remove("opacity-0", "max-h-0");
+        menu.classList.add("opacity-100", "max-h-[1000px]");
+      } else {
+        menu.classList.remove("opacity-100", "max-h-[1000px]");
+        menu.classList.add("opacity-0", "max-h-0");
+
+        setTimeout(() => {
+          menu.classList.remove("flex");
+          menu.classList.add("hidden");
+        }, 500);
+      }
+    }
+  });
+</script>

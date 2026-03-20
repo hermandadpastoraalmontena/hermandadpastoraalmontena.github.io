@@ -1,6 +1,7 @@
 ---
 import "@/styles/global.css";
 import Navbar from "@/components/Navbar.astro";
+import NavbarMini from "@/components/NavbarMini.astro";
 
 interface Props {
   title: string;
@@ -19,7 +20,12 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <Navbar />
+    <div class="hidden xl:block">
+      <Navbar />
+    </div>
+    <div class="block xl:hidden">
+      <NavbarMini />
+    </div>
     <main>
       <slot />
     </main>

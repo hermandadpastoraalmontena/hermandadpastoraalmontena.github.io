@@ -15,139 +15,145 @@ const pageId =
 ---
 
 <nav
-  class="flex flex-col justify-start w-full place-items-center gap-4 p-4 md:px-8"
+  class="grid grid-cols-[1fr_5fr_1fr] w-full items-center gap-4 p-4 md:px-8 bg-red-800 mb-8"
 >
-  <div
-    class="grid grid-cols-2 md:grid-cols-3 w-full justify-center place-items-center"
-  >
-    <button
-      class="flex flex-row gap-1 place-items-center justify-self-start justify-center bg-red-800 hover:bg-red-900 transition ease-in-out w-24 md:w-28 rounded-2xl p-2 cursor-pointer"
-      id="menu-button"
-    >
-      <img src={menu.src} alt="Menu" class="w-6 h-6 md:w-8 md:h-8" />
-      <span class="font-bold text-white text-sm md:text-base">Menú</span>
-    </button>
-    <p class="text-md md:text-xl text-red-800 font-black">
-      {
-        (() => {
-          switch (pageId) {
-            case "":
-              return currentLang === "cat"
-                ? "Sobre nosaltres"
-                : "Sobre nosotros";
-            case "romeriadelrocio":
-              return currentLang === "cat"
-                ? "Romería del Rocío"
-                : "Romería del Rocío";
-            case "pregonrociero":
-              return currentLang === "cat" ? "Pregó Rociero" : "Pregón Rociero";
-            case "cambiodevara":
-              return currentLang === "cat" ? "Canvi de Vara" : "Cambio de Vara";
-            case "villancicos":
-              return currentLang === "cat"
-                ? "Festival i Zambomba de nadales"
-                : "Festival y Zambomba de villancicos";
-            case "santjordi":
-              return currentLang === "cat" ? "Sant Jordi" : "Sant Jordi";
-            case "festamajor":
-              return currentLang === "cat"
-                ? "Festa Major Can Serra"
-                : "Fiesta Mayor Can Serra";
-            case "coro":
-              return currentLang === "cat" ? "Cor" : "Coro";
-            case "juntadirectiva":
-              return currentLang === "cat"
-                ? "Junta Directiva"
-                : "Junta Directiva";
-            default:
-              return currentLang === "cat"
-                ? "Sobre nosaltres"
-                : "Sobre nosotros";
-          }
-        })()
-      }
-    </p>
-  </div>
+  <span class="text-md text-white font-black justify-self-center">
+    {
+      (() => {
+        switch (pageId) {
+          case "":
+            return currentLang === "cat"
+              ? "Sobre nosaltres"
+              : "Sobre nosotros";
+          case "romeriadelrocio":
+            return currentLang === "cat"
+              ? "Romería del Rocío"
+              : "Romería del Rocío";
+          case "pregonrociero":
+            return currentLang === "cat" ? "Pregó Rociero" : "Pregón Rociero";
+          case "cambiodevara":
+            return currentLang === "cat" ? "Canvi de Vara" : "Cambio de Vara";
+          case "villancicos":
+            return currentLang === "cat"
+              ? "Festival i Zambomba de nadales"
+              : "Festival y Zambomba de villancicos";
+          case "santjordi":
+            return currentLang === "cat" ? "Sant Jordi" : "Sant Jordi";
+          case "festamajor":
+            return currentLang === "cat"
+              ? "Festa Major Can Serra"
+              : "Fiesta Mayor Can Serra";
+          case "coro":
+            return currentLang === "cat" ? "Cor" : "Coro";
+          case "juntadirectiva":
+            return currentLang === "cat"
+              ? "Junta Directiva"
+              : "Junta Directiva";
+          default:
+            return currentLang === "cat"
+              ? "Sobre nosaltres"
+              : "Sobre nosotros";
+        }
+      })()
+    }
+  </span>
 
   <div
-    class="w-full p-4 shadow-md flex-col justify-center place-items-center text-center gap-2 rounded-2xl hidden opacity-0 max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
-    id="menu-div"
+    class="p-4 justify-center place-items-center text-center gap-8 flex text-white w-full align-middle"
   >
     <a
       href={getRelativeLocaleUrl(currentLang, `/`)}
       class={pageId === ""
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
+        ? "text-white border-white font-bold"
+        : "opacity-50 hover:scale-105 transition hover:opacity-100 focus:scale-90 duration-150"}
       >{currentLang === "cat" ? "Sobre nosaltres" : "Sobre nosotros"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/romeriadelrocio`)}
       class={pageId === "romeriadelrocio"
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
+        ? "text-white border-white font-bold"
+        : "opacity-50 hover:scale-105 transition hover:opacity-100 focus:scale-90 duration-150"}
       >{currentLang === "cat" ? "Romería del Rocío" : "Romería del Rocío"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/pregonrociero`)}
       class={pageId === "pregonrociero"
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
+        ? "text-white border-white font-bold"
+        : "opacity-50 hover:scale-105 transition hover:opacity-100 focus:scale-90 duration-150"}
       >{currentLang === "cat" ? "Pregó Rociero" : "Pregón Rociero"}</a
     >
     <a
       href={getRelativeLocaleUrl(currentLang, `/cambiodevara`)}
       class={pageId === "cambiodevara"
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
+        ? "text-white border-white font-bold"
+        : "opacity-50 hover:scale-105 transition hover:opacity-100 focus:scale-90 duration-150"}
       >{currentLang === "cat" ? "Canvi de Vara" : "Cambio de Vara"}</a
     >
-    <a
-      href={getRelativeLocaleUrl(currentLang, `/villancicos`)}
-      class={pageId === "villancicos"
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
-      >{
-        currentLang === "cat"
-          ? "Festival i Zambomba de nadales"
-          : "Festival y Zambomba de villancicos"
-      }</a
-    >
-    <a
-      href={getRelativeLocaleUrl(currentLang, `/santjordi`)}
-      class={pageId === "santjordi"
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
-      >{currentLang === "cat" ? "Sant Jordi" : "Sant Jordi"}</a
-    >
-    <a
-      href={getRelativeLocaleUrl(currentLang, `/festamajor`)}
-      class={pageId === "festamajor"
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
-      >{
-        currentLang === "cat"
-          ? "Festa Major Can Serra"
-          : "Fiesta Mayor Can Serra"
-      }</a
-    >
-    <a
-      href={getRelativeLocaleUrl(currentLang, `/coro`)}
-      class={pageId === "coro"
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
-      >{currentLang === "cat" ? "Cor" : "Coro"}</a
-    >
-    <a
-      href={getRelativeLocaleUrl(currentLang, `/juntadirectiva`)}
-      class={pageId === "juntadirectiva"
-        ? "text-red-800 border-red-800 font-bold"
-        : "hover:text-red-800 hover:scale-105 transition"}
-      >{currentLang === "cat" ? "Junta Directiva" : "Junta Directiva"}</a
-    >
-    <div class="flex flex-row gap-4 mt-4">
+
+
+    <div class="relative">
+      <button id="button-menu" class="flex opacity-50 hover:opacity-100 hover:scale-105 focus:scale-90 focus:opacity-100">
+        <img id="menu-img" src="/src/assets/svg/plus.svg" class="w-6" />
+      </button>
+      <dialog id="dialog-sections" class="absolute z-10 hidden flex-col ml-auto items-center gap-4 py-4 px-5 bg-white text-red-800 -translate-x-[12.5rem] shadow-2xl w-96 box-content afterDialog top-8 rounded-xl">
+        <a
+          href={getRelativeLocaleUrl(currentLang, `/villancicos`)}
+          class={pageId === "villancicos"
+            ? "text-red-800 border-white font-bold"
+            : "hover:font-bold hover:opacity-100 opacity-80 hover:scale-105 transition focus:scale-90 duration-150"}
+          >{
+            currentLang === "cat"
+              ? "Festival i Zambomba de nadales"
+              : "Festival y Zambomba de villancicos"
+          }
+        </a>
+        <a
+          href={getRelativeLocaleUrl(currentLang, `/santjordi`)}
+          class={pageId === "santjordi"
+            ? "text-red-800 border-white font-bold"
+            : "hover:font-bold hover:opacity-100 opacity-80 hover:scale-105 transition focus:scale-90 duration-150"}
+          >{currentLang === "cat" ? "Sant Jordi" : "Sant Jordi"}</a
+        >
+        <a
+          href={getRelativeLocaleUrl(currentLang, `/festamajor`)}
+          class={pageId === "festamajor"
+            ? "text-red-800 border-white font-bold"
+            : "hover:font-bold hover:opacity-100 opacity-80 hover:scale-105 transition focus:scale-90 duration-150"}
+          >{
+            currentLang === "cat"
+              ? "Festa Major Can Serra"
+              : "Fiesta Mayor Can Serra"
+          }</a
+        >
+        <a
+          href={getRelativeLocaleUrl(currentLang, `/coro`)}
+          class={pageId === "coro"
+            ? "text-red-800 border-white font-bold"
+            : "hover:font-bold hover:opacity-100 opacity-80 hover:scale-105 transition focus:scale-90 duration-150"}
+          >{currentLang === "cat" ? "Cor" : "Coro"}</a
+        >
+        <a
+          href={getRelativeLocaleUrl(currentLang, `/juntadirectiva`)}
+          class={pageId === "juntadirectiva"
+            ? "text-red-800 border-white font-bold"
+            : "hover:font-bold hover:opacity-100 opacity-80 hover:scale-105 transition focus:scale-90 duration-150"}
+          >{currentLang === "cat" ? "Junta Directiva" : "Junta Directiva"}</a
+        >
+      </dialog>
+    </div>
+    
+  </div>
+  <div class="flex flex-row gap-4 justify-self-end relative">
+    <button id="language-button" class="flex flex-row gap-1 opacity-50 hover:opacity-100 hover:scale-105 focus:scale-90 focus:opacity-100 transition duration-150">
+      <img src="/src/assets/svg/language.svg" />
+      <span class="text-white">{currentLang === "cat"
+            ? "Català"
+            : "Castellano"}</span>
+    </button>
+    <dialog id="dialog-language" class="absolute hidden z-10 flex flex-col ml-auto gap-4 py-4 px-5 bg-white text-red-800 shadow-2xl box-content afterDialogLanguage top-8 rounded-xl w-52 -translate-x-32">
       <a
         href={getRelativeLocaleUrl("es", `/${pageId ? pageId : ""}`)}
-        class="place-self-end hover:scale-105 transition ease-in-out"
+        class="flex flex-row gap-2 justify-center hover:scale-105 transition ease-in-out w-full"
       >
         <img
           src={es.src}
@@ -157,12 +163,13 @@ const pageId =
           title={currentLang === "cat"
             ? "Canviar a castellà"
             : "Cambiar a castellano"}
-          class="w-10 mx-auto"
+          class="w-10"
         />
+        <span>Castellano</span>
       </a>
       <a
         href={getRelativeLocaleUrl("cat", `/${pageId ? pageId : ""}`)}
-        class="place-self-end hover:scale-105 transition ease-in-out"
+        class="flex flex-row gap-2 justify-center hover:scale-105 transition ease-in-out w-full"
       >
         <img
           src={cat.src}
@@ -172,38 +179,39 @@ const pageId =
           title={currentLang === "cat"
             ? "Canviar a català"
             : "Cambiar a catalán"}
-          class="w-10 mx-auto"
+          class="w-10"
         />
+        <span>Català</span>
       </a>
-    </div>
+    </dialog>
   </div>
-</nav>
+  <script>
+    const buttonMenu = document.getElementById("button-menu");
+    const menuImg = document.getElementById("menu-img") as HTMLImageElement;
+    const dialogSections = document.getElementById("dialog-sections");
+    const buttonLanguage = document.getElementById("language-button");
+    const dialogLanguage = document.getElementById("dialog-language");
 
-<script>
-  const button = document.getElementById("menu-button");
-  const menu = document.getElementById("menu-div");
-
-  button?.addEventListener("click", () => {
-    if (menu) {
-      const isHidden = menu.classList.contains("hidden");
-
-      if (isHidden) {
-        menu.classList.remove("hidden");
-        menu.classList.add("flex");
-
-        void menu.offsetHeight;
-
-        menu.classList.remove("opacity-0", "max-h-0");
-        menu.classList.add("opacity-100", "max-h-[1000px]");
-      } else {
-        menu.classList.remove("opacity-100", "max-h-[1000px]");
-        menu.classList.add("opacity-0", "max-h-0");
-
-        setTimeout(() => {
-          menu.classList.remove("flex");
-          menu.classList.add("hidden");
-        }, 500);
+    buttonMenu?.addEventListener("click", () => {
+      if (dialogSections?.classList.contains("hidden")) {
+        dialogSections.classList.remove("hidden");
+        dialogSections.classList.add("flex");
+        menuImg.src = "/src/assets/svg/minus.svg";
+      } else if (dialogSections?.classList.contains("flex")) {
+        dialogSections.classList.remove("flex");
+        dialogSections.classList.add("hidden");
+        menuImg.src = "/src/assets/svg/plus.svg";
       }
-    }
-  });
-</script>
+    })
+
+    buttonLanguage?.addEventListener("click", () => {
+      if (dialogLanguage?.classList.contains("hidden")) {
+        dialogLanguage.classList.remove("hidden");
+        dialogLanguage.classList.add("flex");
+      } else if (dialogLanguage?.classList.contains("flex")) {
+        dialogLanguage.classList.remove("flex");
+        dialogLanguage.classList.add("hidden");
+      }
+    })
+  </script>
+</nav>

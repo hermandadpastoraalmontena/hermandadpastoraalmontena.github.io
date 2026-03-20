@@ -10,7 +10,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
-  color: #00001B;
+  color: #00001b;
   font-family: "Poppins", sans-serif;
 }
 
@@ -18,21 +18,45 @@ body {
   a {
     svg {
       display: inline-block;
-      fill: #00001B;
-      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+      fill: #00001b;
+      transition-property:
+        color, background-color, border-color, text-decoration-color, fill,
+        stroke, opacity, box-shadow, transform, filter, backdrop-filter;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       transition-duration: 150ms;
     }
   }
   a:hover {
     #facebook {
-      fill: #337FFF;  
+      fill: #337fff;
     }
     #instagram {
-      fill: #C13584;
+      fill: #c13584;
     }
     #x {
       opacity: 0.7;
     }
   }
+}
+
+.afterDialog::after {
+  position: absolute;
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  left: 50%;
+  transform: translate(-50%);
+  top: -0.5rem;
+}
+
+.afterDialogLanguage::after {
+  position: absolute;
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  right: 13%;
+  transform: translate(-50%);
+  top: -0.5rem;
 }

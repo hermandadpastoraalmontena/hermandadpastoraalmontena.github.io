@@ -19,6 +19,7 @@ const pageId =
 <nav
   class="grid grid-cols-[1fr_5fr_1fr] w-full items-center gap-4 p-4 md:px-8 bg-red-800 mb-8"
 >
+  <div id="mask" class="hidden fixed inset-0 z-[5]"></div>
   <span class="text-md text-white font-black justify-self-center">
     {
       (() => {
@@ -193,15 +194,18 @@ const pageId =
     const dialogSections = document.getElementById("dialog-sections");
     const buttonLanguage = document.getElementById("language-button");
     const dialogLanguage = document.getElementById("dialog-language");
+    const mask = document.getElementById("mask");
 
     buttonMenu?.addEventListener("click", () => {
       if (dialogSections?.classList.contains("hidden")) {
         dialogSections.classList.remove("hidden");
         dialogSections.classList.add("flex");
+        mask.classList.remove("hidden");
         menuImg.src = minusSrc;
       } else if (dialogSections?.classList.contains("flex")) {
         dialogSections.classList.remove("flex");
         dialogSections.classList.add("hidden");
+        mask.classList.add("hidden");
         menuImg.src = plusSrc;
       }
     })
@@ -210,9 +214,22 @@ const pageId =
       if (dialogLanguage?.classList.contains("hidden")) {
         dialogLanguage.classList.remove("hidden");
         dialogLanguage.classList.add("flex");
+        mask.classList.remove("hidden");
       } else if (dialogLanguage?.classList.contains("flex")) {
         dialogLanguage.classList.remove("flex");
         dialogLanguage.classList.add("hidden");
+        mask.classList.add("hidden");
+      }
+    })
+
+    mask?.addEventListener("click", () => {
+      if (!mask.classList.contains("hidden")) {
+        dialogLanguage.classList.remove("flex");
+        dialogLanguage.classList.add("hidden");
+        dialogSections.classList.remove("flex");
+        dialogSections.classList.add("hidden");
+        mask.classList.add("hidden");
+        menuImg.src = plusSrc;
       }
     })
   </script>

@@ -2,7 +2,9 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import cat from "@/assets/banderas/cat.webp";
 import es from "@/assets/banderas/es.webp";
-import menu from "@/assets/svg/menu.svg";
+import plus from "@/assets/svg/plus.svg";
+import minus from "@/assets/svg/minus.svg";
+import language from "@/assets/svg/language.svg";
 const currentLang = Astro.currentLocale || "es";
 const page = Astro.url.pathname;
 const pagedivided = page.split("/");
@@ -93,7 +95,7 @@ const pageId =
 
     <div class="relative">
       <button id="button-menu" class="flex opacity-50 hover:opacity-100 hover:scale-105 focus:scale-90 focus:opacity-100">
-        <img id="menu-img" src="/src/assets/svg/plus.svg" class="w-6" />
+        <img id="menu-img" src={plus.src} class="w-6" />
       </button>
       <dialog id="dialog-sections" class="absolute z-10 hidden flex-col ml-auto items-center gap-4 py-4 px-5 bg-white text-red-800 -translate-x-[12.5rem] shadow-2xl w-96 box-content afterDialog top-8 rounded-xl">
         <a
@@ -145,7 +147,7 @@ const pageId =
   </div>
   <div class="flex flex-row gap-4 justify-self-end relative">
     <button id="language-button" class="flex flex-row gap-1 opacity-50 hover:opacity-100 hover:scale-105 focus:scale-90 focus:opacity-100 transition duration-150">
-      <img src="/src/assets/svg/language.svg" />
+      <img src={language.src} />
       <span class="text-white">{currentLang === "cat"
             ? "Català"
             : "Castellano"}</span>
@@ -185,9 +187,9 @@ const pageId =
       </a>
     </dialog>
   </div>
-  <script>
+  <script define:vars={{ plusSrc: plus.src, minusSrc: minus.src }}>
     const buttonMenu = document.getElementById("button-menu");
-    const menuImg = document.getElementById("menu-img") as HTMLImageElement;
+    const menuImg = document.getElementById("menu-img");
     const dialogSections = document.getElementById("dialog-sections");
     const buttonLanguage = document.getElementById("language-button");
     const dialogLanguage = document.getElementById("dialog-language");
@@ -196,11 +198,11 @@ const pageId =
       if (dialogSections?.classList.contains("hidden")) {
         dialogSections.classList.remove("hidden");
         dialogSections.classList.add("flex");
-        menuImg.src = "/src/assets/svg/minus.svg";
+        menuImg.src = minusSrc;
       } else if (dialogSections?.classList.contains("flex")) {
         dialogSections.classList.remove("flex");
         dialogSections.classList.add("hidden");
-        menuImg.src = "/src/assets/svg/plus.svg";
+        menuImg.src = plusSrc;
       }
     })
 

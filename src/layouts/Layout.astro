@@ -8,12 +8,12 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Hermandad Rociera Pastora Almonteña de L'Hospitalet de Llobregat. Hermandad Rociera en Cataluña desde 1986." } = Astro.props;
-
 const isCat = Astro.url.pathname.startsWith('/cat');
 const lang = isCat ? 'ca' : 'es';
+const { title, description = lang === "es" ? "Hermandad Rociera Pastora Almonteña de L'Hospitalet de Llobregat. Hermandad Rociera en Cataluña desde 1986." :  "Hermandad Rociera Pastora Almonteña de L'Hospitalet de Llobregat. Hermandad Rociera en Catalunya desde 1986."} = Astro.props;
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogTitle = `${title} | Hermandad Rociera Pastora Almonteña`;
+const ogTitle = title === "Hermandad Rociera Pastora Almonteña" ? `${title}` : `${title} | Hermandad Rociera Pastora Almonteña`;
 ---
 
 <!doctype html>
@@ -30,10 +30,29 @@ const ogTitle = `${title} | Hermandad Rociera Pastora Almonteña`;
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Hermandad Rociera Pastora Almonteña" />
     <meta property="og:locale" content={isCat ? 'ca_ES' : 'es_ES'} />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={ogTitle} />
     <meta name="twitter:description" content={description} />
+    <script type="application/ld+json" set:html={lang === "es" ?
+    JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Hermandad Rociera Pastora Almonteña",
+      "url": "https://hermandadpastoraalmontena.github.io",
+      "description": "Hermandad Rociera Pastora Almonteña de L'Hospitalet de Llobregat. Hermandad Rociera en Cataluña desde 1986.",
+      "foundingDate": "1986",
+      "areaServed": "L'Hospitalet de Llobregat"
+    }) : JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Hermandad Rociera Pastora Almonteña",
+      "url": "https://hermandadpastoraalmontena.github.io",
+      "description": "Hermandad Rociera Pastora Almonteña de L'Hospitalet de Llobregat. Hermandad Rociera en Catalunya desde 1986.",
+      "foundingDate": "1986",
+      "areaServed": "L'Hospitalet de Llobregat"
+    })} />
   </head>
   <body>
     <div class="hidden xl:block">

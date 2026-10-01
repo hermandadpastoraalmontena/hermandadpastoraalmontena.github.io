@@ -25,9 +25,7 @@ const pageId =
       (() => {
         switch (pageId) {
           case "":
-            return currentLang === "cat"
-              ? "Sobre nosaltres"
-              : "Sobre nosotros";
+            return currentLang === "cat" ? "Sobre nosaltres" : "Sobre nosotros";
           case "romeriadelrocio":
             return currentLang === "cat"
               ? "Romería del Rocío"
@@ -52,10 +50,12 @@ const pageId =
             return currentLang === "cat"
               ? "Junta Directiva"
               : "Junta Directiva";
-          default:
+          case "plandeigualdad":
             return currentLang === "cat"
-              ? "Sobre nosaltres"
-              : "Sobre nosotros";
+              ? "Pla d'Igualtat i Coeducació"
+              : "Plan de Igualdad y Coeducación";
+          default:
+            return currentLang === "cat" ? "Sobre nosaltres" : "Sobre nosotros";
         }
       })()
     }
@@ -93,12 +93,17 @@ const pageId =
       >{currentLang === "cat" ? "Canvi de Vara" : "Cambio de Vara"}</a
     >
 
-
     <div class="relative">
-      <button id="button-menu" class="flex opacity-50 hover:opacity-100 hover:scale-105 focus:scale-90 focus:opacity-100">
+      <button
+        id="button-menu"
+        class="flex opacity-50 hover:opacity-100 hover:scale-105 focus:scale-90 focus:opacity-100"
+      >
         <img id="menu-img" src={plus.src} class="w-6" />
       </button>
-      <dialog id="dialog-sections" class="absolute z-10 hidden flex-col ml-auto items-center gap-4 py-4 px-5 bg-white text-red-800 -translate-x-[12.5rem] shadow-2xl w-96 box-content afterDialog top-8 rounded-xl">
+      <dialog
+        id="dialog-sections"
+        class="absolute z-10 hidden flex-col ml-auto items-center gap-4 py-4 px-5 bg-white text-red-800 -translate-x-[12.5rem] shadow-2xl w-96 box-content afterDialog top-8 rounded-xl"
+      >
         <a
           href={getRelativeLocaleUrl(currentLang, `/villancicos`)}
           class={pageId === "villancicos"
@@ -142,18 +147,34 @@ const pageId =
             : "hover:font-bold hover:opacity-100 opacity-80 hover:scale-105 transition focus:scale-90 duration-150"}
           >{currentLang === "cat" ? "Junta Directiva" : "Junta Directiva"}</a
         >
+        <a
+          href={getRelativeLocaleUrl(currentLang, `/plandeigualdad`)}
+          class={pageId === "plandeigualdad"
+            ? "text-red-800 border-white font-bold"
+            : "hover:font-bold hover:opacity-100 opacity-80 hover:scale-105 transition focus:scale-90 duration-150"}
+          >{
+            currentLang === "cat"
+              ? "Pla d'Igualtat i Coeducació"
+              : "Plan de Igualdad y Coeducación"
+          }</a
+        >
       </dialog>
     </div>
-    
   </div>
   <div class="flex flex-row gap-4 justify-self-end relative">
-    <button id="language-button" class="flex flex-row gap-1 opacity-50 hover:opacity-100 hover:scale-105 focus:scale-90 focus:opacity-100 transition duration-150">
+    <button
+      id="language-button"
+      class="flex flex-row gap-1 opacity-50 hover:opacity-100 hover:scale-105 focus:scale-90 focus:opacity-100 transition duration-150"
+    >
       <img src={language.src} />
-      <span class="text-white">{currentLang === "cat"
-            ? "Català"
-            : "Castellano"}</span>
+      <span class="text-white"
+        >{currentLang === "cat" ? "Català" : "Castellano"}</span
+      >
     </button>
-    <dialog id="dialog-language" class="absolute hidden z-10 flex-col ml-auto gap-4 py-4 px-5 bg-white text-red-800 shadow-2xl box-content afterDialogLanguage top-8 rounded-xl w-52 -translate-x-32">
+    <dialog
+      id="dialog-language"
+      class="absolute hidden z-10 flex-col ml-auto gap-4 py-4 px-5 bg-white text-red-800 shadow-2xl box-content afterDialogLanguage top-8 rounded-xl w-52 -translate-x-32"
+    >
       <a
         href={getRelativeLocaleUrl("es", `/${pageId ? pageId : ""}`)}
         class="flex flex-row gap-2 justify-center hover:scale-105 transition ease-in-out w-full"
@@ -208,7 +229,7 @@ const pageId =
         mask.classList.add("hidden");
         menuImg.src = plusSrc;
       }
-    })
+    });
 
     buttonLanguage?.addEventListener("click", () => {
       if (dialogLanguage?.classList.contains("hidden")) {
@@ -220,7 +241,7 @@ const pageId =
         dialogLanguage.classList.add("hidden");
         mask.classList.add("hidden");
       }
-    })
+    });
 
     mask?.addEventListener("click", () => {
       if (!mask.classList.contains("hidden")) {
@@ -231,6 +252,6 @@ const pageId =
         mask.classList.add("hidden");
         menuImg.src = plusSrc;
       }
-    })
+    });
   </script>
 </nav>

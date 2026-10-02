@@ -18,7 +18,7 @@ import Footer from "@/components/Footer.astro";
     </p>
     <div>
       <h2
-        class="text-md lg:text-lg xl:text-xl font-bold xl:mb-8 bg-gray-100 p-2 border-l-4 border-gray-600"
+        class="text-md lg:text-lg xl:text-xl font-bold mb-8 bg-gray-100 p-2 border-l-4 border-gray-600"
       >
         1. JUSTIFICACIÓN Y MARCO NORMATIVO
       </h2>
@@ -64,7 +64,7 @@ import Footer from "@/components/Footer.astro";
     </div>
     <div>
       <h2
-        class="text-md lg:text-lg xl:text-xl font-bold xl:mb-8 bg-gray-100 p-2 border-l-4 border-gray-600 mt-6"
+        class="text-md lg:text-lg xl:text-xl font-bold mb-8 bg-gray-100 p-2 border-l-4 border-gray-600 mt-6"
       >
         2. OBJETIVOS ESTRATÉGICOS
       </h2>
@@ -100,7 +100,7 @@ import Footer from "@/components/Footer.astro";
     </div>
     <div>
       <h2
-        class="text-md lg:text-lg xl:text-xl font-bold xl:mb-8 bg-gray-100 p-2 border-l-4 border-gray-600 mt-6"
+        class="text-md lg:text-lg xl:text-xl font-bold mb-8 bg-gray-100 p-2 border-l-4 border-gray-600 mt-6"
       >
         3. EJE I: FORMACIÓN, SENSIBILIZACIÓN Y COEDUCACIÓN
       </h2>
@@ -144,7 +144,7 @@ import Footer from "@/components/Footer.astro";
     </div>
     <div>
       <h2
-        class="text-md lg:text-lg xl:text-xl font-bold xl:mb-8 bg-gray-100 p-2 border-l-4 border-gray-600"
+        class="text-md lg:text-lg xl:text-xl font-bold mb-8 bg-gray-100 p-2 border-l-4 border-gray-600"
       >
         4. EJE II: MEDIDAS EN ESPACIOS FESTIVOS (ZAMBOMBAS, VERBENAS, ROMERÍAS)
       </h2>
@@ -189,7 +189,7 @@ import Footer from "@/components/Footer.astro";
     </div>
     <div>
       <h2
-        class="text-md lg:text-lg xl:text-xl font-bold xl:mb-8 bg-gray-100 p-2 border-l-4 border-gray-600"
+        class="text-md lg:text-lg xl:text-xl font-bold mb-8 bg-gray-100 p-2 border-l-4 border-gray-600"
       >
         5. PROTOCOLO DE ACTUACIÓN E INTERVENCIÓN INMEDIATA
       </h2>
@@ -244,29 +244,62 @@ import Footer from "@/components/Footer.astro";
         </div>
       </div>
     </div>
-    <div>
+    <div class="min-w-0">
       <h2
-        class="text-md lg:text-lg xl:text-xl font-bold xl:mb-8 bg-gray-100 p-2 border-l-4 border-gray-600"
+        class="text-md lg:text-lg xl:text-xl font-bold mb-8 bg-gray-100 p-2 border-l-4 border-gray-600"
       >
         6. ESTRUCTURA DE SEGUIMIENTO Y EVALUACIÓN
       </h2>
+      <div class="w-full min-w-0 overflow-x-auto mb-8">
+        <table class="evaluationTable">
+          <thead>
+            <tr>
+              <th>Indicador de cumplimiento</th>
+              <th>Meta anual</th>
+              <th>Mecanismo de verificación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Talleres de coeducación y consentimiento realizados</td>
+              <td>Mínimo 2 sesiones/año</td>
+              <td>Registro de asistencia y actas</td>
+            </tr>
+            <tr>
+              <td>Representación de mujeres en cartelería y actuaciones</td>
+              <td>Criterio de paridad (50%)</td>
+              <td>Revisión de programación cultural</td>
+            </tr>
+            <tr>
+              <td>Voluntariado capacitado en el Punto Violeta</td>
+              <td>100% del personal asignado</td>
+              <td>Certificación interna de formación</td>
+            </tr>
+            <tr>
+              <td>Evaluación de incidencias y protocolo</td>
+              <td>1 Memoria anual</td>
+              <td>Aprobación en Asamblea General</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div>
       <h2
-        class="text-md lg:text-lg xl:text-xl font-bold xl:mb-8 bg-gray-100 p-2 border-l-4 border-gray-600"
+        class="text-md lg:text-lg xl:text-xl font-bold mb-8 bg-gray-100 p-2 border-l-4 border-gray-600"
       >
         7. RECURSOS Y TELÉFONOS DE EMERGENCIA DIRECTA
       </h2>
-      <div class="mt-4 grid grid-cols-3 mb-8 bg-black text-gray-200 px-8 py-4">
-        <div class="flex flex-col items-center">
+      <div class="mt-4 grid grid-cols-3 mb-8 bg-black text-gray-200 px-8 py-4 text-center">
+        <div class="flex flex-col items-center justify-between gap-4">
           <p>Institut Català de les Dones</p>
           <span class="font-bold text-2xl">934 951 600</span>
         </div>
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center justify-between gap-4">
           <p>Emergencias Generales</p>
           <span class="font-bold text-2xl">112</span>
         </div>
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center justify-between gap-4">
           <p>Atención Violencia de Género</p>
           <span class="font-bold text-2xl">016</span>
         </div>

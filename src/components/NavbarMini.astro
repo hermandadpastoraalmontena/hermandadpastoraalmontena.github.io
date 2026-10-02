@@ -151,13 +151,9 @@ const pageId =
     <a
       href={getRelativeLocaleUrl(currentLang, `/plandeigualdad`)}
       class={pageId === "plandeigualdad"
-        ? "text-red-800 border-white font-bold"
-        : "hover:font-bold hover:opacity-100 opacity-80 hover:scale-105 transition focus:scale-90 duration-150"}
-      >{
-        currentLang === "cat"
-          ? "Pla d'Igualtat i Coeducació"
-          : "Plan de Igualdad y Coeducación"
-      }</a
+        ? "text-red-800 border-red-800 font-bold"
+        : "hover:text-red-800 hover:scale-105 transition"}
+      >{currentLang === "cat" ? "Pla d'Igualtat i Coeducació" : "Plan de Igualdad y Coeducación"}</a
     >
     <div class="flex flex-row gap-4 mt-4">
       <a

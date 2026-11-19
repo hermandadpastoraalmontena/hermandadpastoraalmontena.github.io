@@ -1,7 +1,8 @@
 // @ts-check
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
+import tailwind from "tailwindcss";
+import autoprefixer from "autoprefixer";
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,8 +14,14 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+  vite: {
+    css: {
+      postcss: {
+        plugins: [tailwind(), autoprefixer()],
+      },
+    },
+  },
   integrations: [
-    tailwind(),
     sitemap({
       i18n: {
         defaultLocale: "es",
